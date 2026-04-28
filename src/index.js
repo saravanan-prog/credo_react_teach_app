@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import DemoPage1 from './Pages/DemoPage1';
+import DemoPage2 from './Pages/DemoPage2';
+import DemoPage3 from './Pages/DemoPage3'
+import DemoPage4 from './Pages/DemoPage4';
+import DemoPage5 from './Pages/DemoPage5';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <DemoPage1 /> */}
+    {/* <DemoPage2 /> */}
+    {/* { <DemoPage3 /> } */}
+    {/* <DemoPage4 /> */}
+    <DemoPage5/>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
