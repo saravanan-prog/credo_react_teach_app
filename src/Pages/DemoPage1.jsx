@@ -1,11 +1,23 @@
+import { useState } from "react";
+
 export default function DemoPage1() {
   
-  const candidateName = "Saravanan Durai"
-  const candidateisAvailable = true 
+  const [canidateName,setCanidateName] = useState("Saravanan Durai")
+  const [candidateAge,setcandidateAge]  = useState(27)
+
+  
 
   return (
     <div>
-        <p> Canidate Name : {candidateisAvailable ? candidateName : "Not-Available"} </p>
+        <div>
+            <span> Canidate Name:  {canidateName } </span> 
+            <span> <button onClick = {()=> setCanidateName("Ramesh") }> Change Name </button> </span>
+        </div>
+
+         <div>
+            <span> Canidate Age : {candidateAge } </span> 
+            <span> <button onClick = {()=>setcandidateAge(28)}> Change Name </button> </span>
+        </div>
     </div>
   );
 }
