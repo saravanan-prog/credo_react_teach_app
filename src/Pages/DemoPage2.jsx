@@ -11,12 +11,8 @@ export default function DemoPage2() {
 
   const handleUpdate = () =>{
     setcandidateName("Sarath kumar")
-    // setcandidateDepositAmt((prevState) => prevState + 20000)
-    // setReturnAmount((prevState) =>  prevState - 7000)
-
     setcandidateDepositAmt(candidateDepositAmt + 20000)
     setReturnAmount(returnAmount - 7000)
-  
     setMenscount(50000)
     setFemalescount(50000)
   }

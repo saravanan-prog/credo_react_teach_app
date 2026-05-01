@@ -13,10 +13,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <DemoPage1 /> */}
-    <DemoPage2 />
+    {/* <DemoPage2 /> */}
     {/* { <DemoPage3 /> } */}
     {/* <DemoPage4 /> */}
-    {/* <DemoPage5/> */}
+    <DemoPage5/>
    
   </React.StrictMode>
 );

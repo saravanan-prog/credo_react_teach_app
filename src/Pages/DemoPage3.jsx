@@ -1,17 +1,24 @@
+import { useState } from "react";
+
+
 export default function DemoPage3() {
-  const fruitsList = ["apple", "orange", "grapes", "pineApple", "lichi"];
-  const vegetableList = ["bringal", "potatoo", "cababage", "carrot"];
+
+  const [fruitsList, setFruitList] = useState(["apple", "orange", "grapes", "pineApple", "lichi"]);
+  const [vegetableList, setVegtableList] = useState(["bringal", "potatoo", "cababage", "carrot"]);
+
 
   return (
     <div>
       <div className="fruit-list">
         <h3> Fruit List </h3>
-        
+
         {fruitsList.map((value, index) => (
           <p key={index}> {value} </p>
         ))}
 
+        <button onClick={() => setFruitList([...fruitsList, "greenapple"])}> Add Fruits </button>
         <hr />
+
       </div>
 
       <div className="vegtable-list">
@@ -23,6 +30,8 @@ export default function DemoPage3() {
             ))}
           </ul>
         </nav>
+
+        <button onClick={() => setVegtableList([...vegetableList, "cali-flower"])}> Add vegetables </button>
       </div>
     </div>
   );
