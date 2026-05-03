@@ -1,11 +1,8 @@
 export default function DemoPage1() {
-  
-  const candidateName = "Saravanan Durai"
-  const candidateisAvailable = true 
 
-  return (
-    <div>
-        <p> Canidate Name : {candidateisAvailable ? candidateName : "Not-Available"} </p>
-    </div>
-  );
+  return <div>
+    <h1 className="title"> Welcome to React JS world</h1>
+    <p  className="author"> Developed By : Saravanan Durai</p>
+    <p  className="qulaified"> Masters in React web development </p>
+  </div>
 }
