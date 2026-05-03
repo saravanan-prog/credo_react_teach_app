@@ -37,10 +37,6 @@ export default class SimpleState extends React.Component {
                 <p>Picked Course : {this.state.student.course}</p>
             </div>
 
-
-
-
-
         </div>
     }
 
