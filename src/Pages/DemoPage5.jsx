@@ -3,7 +3,7 @@ import studentinfo from '../asset/json/studentInfo.json'
 
 export default function DemoPage5() {
 
-  const [studentInfo,setStudentInfo] = useState(studentinfo)
+  const [studentInfo, setStudentInfo] = useState(studentinfo)
 
 
   const addNewStudent = () => {
@@ -21,16 +21,16 @@ export default function DemoPage5() {
 
     const updateInfo = studentInfo.map(
 
-       (value,index) =>{
+      (value, index) => {
 
-          if(index == profileIndex){
-              value.name = "Taj"
-              value.age = 22
-              value.course= "vue Js"
-          }
+        if (index == profileIndex) {
+          value.name = "Taj"
+          value.age = 22
+          value.course = "vue Js"
+        }
 
-          return value
-       }
+        return value
+      }
     )
 
     setStudentInfo(updateInfo)
@@ -39,16 +39,10 @@ export default function DemoPage5() {
 
   const handleDelete = (profileIndex) => {
 
-    const afterDeleteRecord = studentInfo.filter( (value,index) => index != profileIndex )
-
+    const afterDeleteRecord = studentInfo.filter((value, index) => index != profileIndex)
     setStudentInfo(afterDeleteRecord)
 
   }
-
-
-
-
-
 
 
 
@@ -62,14 +56,14 @@ export default function DemoPage5() {
               <p> Student Name : {value?.name} </p>
               <p> Student Age : {value?.age} </p>
               <p> Student course : {value?.course} </p>
-              <button onClick = {() => handleUpdate(index)}>update</button>
-              <button onClick = {() => handleDelete(index)}>delete</button>
+              <button onClick={() => handleUpdate(index)}>update</button>
+              <button onClick={() => handleDelete(index)}>delete</button>
               <hr />
             </React.Fragment>
           );
         })}
       </div>
-      <button onClick = {addNewStudent}> Add New Student </button>
+      <button onClick={addNewStudent}> Add New Student </button>
     </div>
   );
 }
