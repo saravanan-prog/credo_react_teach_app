@@ -1,5 +1,5 @@
 import { useState } from "react"
-import employeeData from '../asset/json/employee.json'
+import employeeData from '../../asset/json/employee.json'
 
 export default function DemoPage4() {
 

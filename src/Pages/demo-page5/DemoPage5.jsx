@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import studentinfo from '../asset/json/studentInfo.json'
+import studentinfo from '../../asset/json/studentInfo.json'
+
 
 export default function DemoPage5() {
 
@@ -44,8 +45,6 @@ export default function DemoPage5() {
 
   }
 
-
-
   return (
     <div>
       <div className="employee-List">
@@ -63,7 +62,7 @@ export default function DemoPage5() {
           );
         })}
       </div>
-      <button onClick={addNewStudent}> Add New Student </button>
+      <button onClick={ addNewStudent}> Add New Student </button>
     </div>
   );
 }
