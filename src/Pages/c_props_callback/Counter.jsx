@@ -6,9 +6,11 @@ export default function Counter(){
 
   const [count,setCount] = useState(0)
 
-  const clickme = (data) => console.log(data)
+ 
   const addCount = (item) => setCount(count + item)
   const subCount = (item) => setCount(count - item)
+  const reset = (item) => setCount(item)
+  const squareRoot = (item) => setCount(count ** item)
  
   
   
@@ -17,9 +19,11 @@ export default function Counter(){
         <p> Current Value : {count} </p>   
         
         <Buttons 
-           clickme = {clickme}
+           count = {count}
            addCount = {addCount}
            subCount = {subCount}
+           squareRoot = {squareRoot}
+           reset = {reset}
      
         />
 
