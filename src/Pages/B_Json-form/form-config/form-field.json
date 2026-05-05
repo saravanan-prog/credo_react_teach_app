@@ -1,0 +1,42 @@
+
+[
+    {   
+        "fieldLabel" : "User name",
+        "fieldType" : "text",
+        "fieldname" : "username",
+        "fieldID" : "username",
+        "fieldClass" : "",
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel":""
+    },
+    {   
+        "fieldLabel" : "Password",
+        "fieldType" : "password",
+        "fieldname" : "password",
+        "fieldID" : "password",
+        "fieldClass" : "",
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel":""
+    },
+
+    {   
+        "fieldLabel" : "",
+        "fieldType" : "checkbox",
+        "fieldname" : "terms-of-condition",
+        "fieldID" : "terms",
+        "fieldClass" : "",
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel":"All Terms of condition accept by my knowledge "
+    },
+    {   
+        "fieldLabel" : "",
+        "fieldType" : "submit",
+        "fieldname" : "submit",
+        "fieldID" : "submit",
+        "fieldClass" : "",
+        "buttonText" : "Login",
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel": "",
+        "disabled" : false
+    }
+]

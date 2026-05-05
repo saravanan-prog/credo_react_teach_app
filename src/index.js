@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import BasicForm from './Pages/A_basic-form/BasiscForm';
+import JsonLoginForm from './Pages/B_Json-form/JsonLoginForm';
+import BasicFormik from './Pages/C_Formik-form/BasicFormik';
+import BasicFormikYup from './Pages/D_formik-yup-validation/BasicFormikYup';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BasicFormikYup />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
