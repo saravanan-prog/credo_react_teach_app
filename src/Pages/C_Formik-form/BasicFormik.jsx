@@ -17,6 +17,7 @@ export default function BasicFormik() {
 
             onSubmit={(values) => {
                 console.log("Form is submitted ", values)
+                
             }}
         >
 
@@ -46,7 +47,6 @@ export default function BasicFormik() {
                     </div>
 
                 </Form>
-
 
 
             )}
