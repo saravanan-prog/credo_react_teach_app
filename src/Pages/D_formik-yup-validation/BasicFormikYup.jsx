@@ -48,7 +48,7 @@ export default function BasicFormikYup() {
                     <div>
                         <label> Password </label>
                         <Field 
-                            type="text" 
+                            type="password" 
                             name="password"
                             onClick={handleChange}
                         />
