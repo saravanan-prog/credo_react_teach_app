@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import LifeCyclemethods from "./Pages/Life-cycle-methods/LifeCyclemethods";
+import Example1 from "./Pages/side-effects/Example1";
+import Products from "./Pages/side-effects/Products";
 
 
 
@@ -7,7 +10,7 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-     <h1>Hello Welcome to React Js world </h1>
-  </React.StrictMode>
+  <div>
+     <Products />
+  </div>
 );
