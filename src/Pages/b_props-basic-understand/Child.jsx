@@ -19,12 +19,12 @@ export default function Child(
       <p> Student Age : {studentAge} </p>
       <p> Student Location : {studentLocation} </p>
 
+      <h3>Primar skill set</h3>
+        {studentSkillset.map((value,index) => <p key={index}>{value} </p>)}
+
       <h4> Acadmeic Courses:</h4>
         <p>{firstSem} </p>
          <p>{secondSem} </p>
          <p>{thridSem} </p>
-
-
-
   </div>
 }

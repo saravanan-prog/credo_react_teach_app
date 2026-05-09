@@ -27,5 +27,7 @@ export default function Student(){
            academicResut = {academicResut}
         />
 
+        
+
   </div>
 }

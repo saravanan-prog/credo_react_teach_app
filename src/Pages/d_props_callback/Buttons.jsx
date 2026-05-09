@@ -1,7 +1,6 @@
 export default function Buttons( 
   { 
     count,
-    clickme,
     addCount,
     subCount,
     squareRoot,
@@ -13,7 +12,7 @@ export default function Buttons(
   return <div>
       
 
-      <button onClick={() => addCount(1)}> Add </button>
+      <button onClick={ () => addCount(1) }> Add </button>
 
       <button onClick={() => subCount(1)}
          disabled = {count == 0}
