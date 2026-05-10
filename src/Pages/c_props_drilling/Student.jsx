@@ -1,19 +1,17 @@
 import AdditinalInformation from "./components/AdditionalInfo"
-import { useState } from "react"
 export default function Student(){
 
-     const [studentName,setstudentName] = useState("saravanan")
-     const [studentAge,setstudentAge] = useState(27)
-     const [studentclasType,setstudentclasType] = useState("CBSE")
-     const [studentLocation,setstudentLocation] = useState("velachery")
-     const [studentSkillset,setstudentSkillset] = useState(["React","Angular","NodeJs","Java"])
-     const [academicResut,setacademicResut] = useState(
-        {
-           "firstSem" : "React-desitination", 
-           "secondSem" : "Angular-first-class",
-           "thridSem" : "Pursing-backend"
-        }
-     )
+  const studentName = "saravanan"
+  const studentAge = 27
+  const studentclasType = "CBSE"
+  const studentLocation = "velachery"
+  const studentSkillset = ["React","Angular","NodeJs","Java"]
+  const academicResut = {
+     "firstSem" : "React-desitination", 
+     "secondSem" : "Angular-first-class",
+     "thridSem" : "Pursing-backend"
+  }
+
 
   return <div>
 
