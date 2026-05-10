@@ -8,14 +8,18 @@ export default function DemoPage5() {
 
 
   const addNewStudent = () => {
-    setStudentInfo([
-      ...studentInfo,
-      {
-        name: "Ramesh",
-        age: 28,
-        course: "Javascript",
-      },
-    ]);
+
+    setStudentInfo(
+      [
+        ...studentInfo,
+        {
+          name: "Ramesh",
+          age: 28,
+          course: "Javascript",
+        },
+      ]
+    );
+
   };
 
   const handleUpdate = (profileIndex) => {

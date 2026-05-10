@@ -17,12 +17,12 @@ export default function DemoPage1() {
 
       <div>
         <span> Canidate Age : {candidateAge} </span>
-        <span> <button onClick={() => setcandidateAge(28)}> Change Name </button> </span>
+        <span> <button onClick={() => setcandidateAge(28)}> Change age </button> </span>
       </div>
 
       <div>
         <span> Canidate Score : {score} </span>
-        <span> <button onClick={() => setScore((prevState) => prevState + 1)}> Add Score </button> </span>
+        <span> <button onClick={() => setScore( (prevState)=> prevState + 1 )}> Add Score </button> </span>
       </div>
     </div>
   );

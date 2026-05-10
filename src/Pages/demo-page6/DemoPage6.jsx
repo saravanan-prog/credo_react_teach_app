@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 import studentinfo from '../../asset/json/studentInfo.json'
-import { addNewStudent,handleUpdate,handleDelete } from "./demoPage6-action";
+import { addNewStudent,handleUpdate,handleDelete } from "./demoPage6.action";
 
 export default function DemoPage6() {
 
   const [studentInfo, setStudentInfo] = useState(studentinfo)
+  
+  const addNewStudent =() => {
+    let newStudent = {
+    name: "Ramesh",
+    age: 28,
+    course: "Javascript",
+  }
+
+  setStudentInfo([
+    ...studentInfo,
+    newStudent
+
+  ]);
+  }
 
   return (
     <div>

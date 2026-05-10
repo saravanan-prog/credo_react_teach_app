@@ -8,25 +8,30 @@ export default function DemoPage2() {
   const [returnAmount,setReturnAmount] = useState(candidateDepositAmt - 6000);
   const [mensCount,setMenscount] = useState(100000);
   const [femalesCount,setFemalescount] = useState(25000);
+  const [bulkbtndisable,setbulkbtndisable] = useState(false)
 
   const handleUpdate = () =>{
     setcandidateName("Sarath kumar")
     setcandidateDepositAmt(candidateDepositAmt + 20000)
-    setReturnAmount(returnAmount - 7000)
+    setReturnAmount(candidateDepositAmt - 7000)
     setMenscount(50000)
     setFemalescount(50000)
+    setbulkbtndisable(true)
   }
 
   return (
     <div>
-      <p> Election Naminated Candidate - {candidateName.toUpperCase()} </p> 
-      <p> Depost Election Amount - {candidateDepositAmt.toFixed(2)} </p>
-      <p> After Election get Return Amount : {returnAmount.toFixed(2)} </p>
       <p> Election Commission name : {"Tamilnadu"} </p>
+      <p> Election Naminated Candidate - {candidateName.toUpperCase()} </p>  
+      <p> Deposit Election Amount - {candidateDepositAmt.toFixed(2)} </p>
+      <p> After Election get Return Amount : {returnAmount.toFixed(2)} </p>
       <p> People population : {mensCount + femalesCount}</p>
 
       <div>
-         <button onClick = {handleUpdate}>update Information</button>
+         <button 
+           onClick = {handleUpdate}
+           disabled = {bulkbtndisable}
+         > Bulk Update </button>
       </div>
 
 

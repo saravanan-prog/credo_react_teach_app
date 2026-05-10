@@ -3,12 +3,13 @@ import employeeData from '../../asset/json/employee.json'
 
 export default function DemoPage4() {
 
-    const [employeeInfo, setEmployeeInfo] = useState(employeeData)
 
-    const handleUpdate = () => {
+    const [employeeInfo, setEmployeeInfo] = useState(employeeData)
+    
+    const bulkUpdate = () => {
 
         setEmployeeInfo({
-            ...employeeInfo,
+           
             name: "kamalesh",
             age: 32,
             work: "Tech-mahi",
@@ -34,13 +35,13 @@ export default function DemoPage4() {
 
             <div>
                 <p> Employee Age : {employeeInfo?.age} </p>
-                <button onClick={() => setEmployeeInfo({ ...employeeInfo, age: 35 })}>Update age </button>
+                <button onClick={() => setEmployeeInfo({...employeeInfo, age: 35 })}>Update age </button>
             </div>
 
             <div>
                 <p> Employee work : {employeeInfo?.work} </p>
                 <button
-                    onClick={() => setEmployeeInfo({ ...employeeInfo, work: "CTS"})}>update work </button>
+                    onClick={() => setEmployeeInfo({...employeeInfo,  work: "CTS"})}>update work </button>
             </div>
 
 
@@ -49,7 +50,7 @@ export default function DemoPage4() {
                 <button onClick={
                     () => setEmployeeInfo(
                         {
-                            ...employeeInfo,
+                           ...employeeInfo,
                             location: "Banglore"
                         }
                     )}
@@ -74,7 +75,7 @@ export default function DemoPage4() {
         </div>
         
         <div>
-            <button onClick={handleUpdate}> update Employee Information </button>
+            <button onClick={bulkUpdate}> Bulk update </button>
         </div>
     </div>
 }
