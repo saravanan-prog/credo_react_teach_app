@@ -3,7 +3,7 @@ import states from '../assets/json/stateList.json'
 import cities from '../assets/json/cityList.json'
 
 
-export default function Dropdown() {
+export default function SelectBoxEvents() {
 
     const [stateList, setStateList] = useState(states)
     const [citiesList, setCitiesList] = useState(cities)
@@ -13,8 +13,9 @@ export default function Dropdown() {
 
     return <div>
         <div>
-
+            <h1>States</h1>
             <select onChange={(event) => setSelectedState(event.target.value)}>
+        
                 {stateList.map((value, index) => {
                     return  <option value={value?.stateCode} > {value?.stateName} </option>
                 })}
@@ -22,10 +23,10 @@ export default function Dropdown() {
 
             <p> Your are sleceted State is : {selectedState} </p>
 
-
+             <h1> Cities </h1>   
             <select>
                 {citiesList.map((value, index) => {
-                    return (selectedState == value.stateCode) && <option> {value.city} </option>
+                    return (selectedState == value.stateCode) && <option> {value.city} </option> 
                 })
                 }
             </select>
