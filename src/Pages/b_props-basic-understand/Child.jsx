@@ -11,7 +11,7 @@ export default function Child(
 ){
 
   const {firstSem,secondSem,thridSem} = academicResut
-
+  
 
   return <div>
       <h3> I am Child Component </h3>

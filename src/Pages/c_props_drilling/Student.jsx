@@ -5,12 +5,30 @@ export default function Student(){
   const studentAge = 27
   const studentclasType = "CBSE"
   const studentLocation = "velachery"
-  const studentSkillset = ["React","Angular","NodeJs","Java"]
-  const academicResut = {
-     "firstSem" : "React-desitination", 
-     "secondSem" : "Angular-first-class",
-     "thridSem" : "Pursing-backend"
-  }
+  const studentSkillset = [
+      {
+         year : 2022,
+         skillset : "React",
+         Result : "Excellent"
+      },
+      {
+         year : 2024,
+         skillset : "Angular",
+         Result : "Good"
+      },
+      {
+         year : 2025,
+         skillset : "Next Js",
+         Result : "Very Excellent "
+      },
+         {
+         year : 2026,
+         skillset : "Full stack",
+         Result : "Processing"
+      }
+
+  ]
+ 
 
 
   return <div>
@@ -19,12 +37,13 @@ export default function Student(){
         <h5> Our Top performer Student </h5>
         <p> Studnet Name is : {studentName} </p>
         
+
         <AdditinalInformation  
            studentAge  = {studentAge}
            studentclasType = {studentclasType}
            studentLocation = {studentLocation}
            studentSkillset = {studentSkillset}
-           academicResut = {academicResut}
+           
         />
 
         
