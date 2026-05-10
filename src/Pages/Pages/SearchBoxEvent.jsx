@@ -1,40 +1,51 @@
-import { useState } from "react"
+import { useState } from "react";
 
-export default  function SearchBoxEvent(){
+export default function SearchBoxEvent() {
 
-    const [fruit,setFruitList] =useState(["apple","orange","grapes"])
-    const [searchText,setSearchText] = useState()
+    const fruitsData = ["apple", "orange", "grapes"];
 
+    const [fruit, setFruitList] = useState(fruitsData);
+    const [searchText, setSearchText] = useState("");
 
     const searchTextHandling = (event) => {
-        let text = event.target.value
-
-        if(text.length != 0 )
-
-            setSearchText(text)
-        else
-            setSearchText(["apple","orange","grapes"])
-
-    }
+        setSearchText(event.target.value);
+    };
 
     const handleSearch = () => {
 
-        const filterFruits = fruit.filter( value => value == searchText )
-        console.log("searchText===>",searchText)
-        console.log("filterFruits===>",filterFruits)
-        setFruitList(filterFruits)
-    }
+        if (searchText.length === 0) {
+            setFruitList(fruitsData);
+            return;
+        }
 
-    return <div>
-        <div>
-            <input type="text"  onChange={searchTextHandling }/>
-            <button onClick={handleSearch}>Search</button>
-        </div>
-        
+        const filterFruits = fruitsData.filter(
+            (value) => value.toLowerCase() === searchText.toLowerCase()
+        );
 
+        setFruitList(filterFruits);
+    };
+
+    return (
         <div>
-            <h3> Fruit List </h3>
-            {fruit.map((value,index) => <p key={index}> {value} </p>)}
+            <div>
+                <input
+                    type="text"
+                    onChange={searchTextHandling}
+                    value={searchText}
+                />
+
+                <button onClick={handleSearch}>
+                    Search
+                </button>
+            </div>
+
+            <div>
+                <h3>Fruit List</h3>
+
+                {fruit.map((value, index) => (
+                    <p key={index}>{value}</p>
+                ))}
+            </div>
         </div>
-    </div>
+    );
 }
