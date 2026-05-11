@@ -10,31 +10,29 @@ import DashboardPage from "../Pages/dashboard/DashboardPage"
 import ProductsPage from "../Pages/products/ProductsPage"
 import ProtectionRoute from "./ProtectionRoute"
 import ViewFullProduct from "../Pages/products/view-product/ViewFullProduct"
+import AdminPage from "../Pages/admin-contextApi/AdminPage"
 
 
 export default function MainRoute(){
-
-
+  
     return <div>
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route index element = { <ProductsPage/>} />
+                <Route index element = { <Homepage/>} />
                 <Route path ="home" element = {<Homepage/>} />
                 <Route path ="about" element = {<Aboutpage/>} />
                 <Route path ="blog" element = {<Blogpage/>} />
                 <Route path ="contact" element = {<Contactpage/>} />
                 <Route path ="products" element = {<ProductsPage/>} />
-
-                 <Route path="viewproduct" element = {<ViewFullProduct/>} />
-
-                <Route path="viewproduct/:id" element = {<ViewFullProduct/>} />
-
-
+                <Route path="products/viewproduct" element = {<ViewFullProduct/>} />
+                <Route path="/viewproduct/:id" element = {<ViewFullProduct/>} />
 
                 <Route path ="login" element = {<LoginForm/>} />
+
+
                 <Route path ="dashboard" element = {
-                    <ProtectionRoute>
+                    <ProtectionRoute >
                         <DashboardPage/>
                     </ProtectionRoute>
                     }
