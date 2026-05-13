@@ -8,6 +8,7 @@ export default function useFetch(url){
     const [error,setError] = useState(null)
 
     useEffect(()=>{
+
         const apiCall = async () => {
             try{
                 let response = await fetch(url)
@@ -17,7 +18,7 @@ export default function useFetch(url){
 
             }
             catch(error){
-                setError(error?.message)
+                setError("Something Went wrong !!!")
             }
             finally{
                 setLoading(false)

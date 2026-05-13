@@ -3,6 +3,7 @@ import enLang from '../lang/en.json'
 import { useEffect, useState } from 'react'
 
 export default function useLang(langType = 'en'){
+    
     const [content,setContent] = useState(langType)
 
 

@@ -1,4 +1,7 @@
 {
     "homePage_lg" : "Home Page",
-    "usersList_lg" : "Users List"
+    "usersList_lg" : "Users List",
+    "loading_lg" :"Loading...",
+    "name_lg" :"Name",
+    "email_lg" :"Email"
 }
