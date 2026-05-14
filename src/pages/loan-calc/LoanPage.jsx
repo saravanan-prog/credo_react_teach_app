@@ -19,7 +19,6 @@ export default function LoanPage(){
          <p> Principal Amt - {principalAmt}</p>
          <p> Inrest Rate  - {IntrestRate}</p>
          <button onClick={()=>dispatch(calcIntrest())}> Calc intrest </button>
-
          <button onClick={()=>dispatch(intrestBy({"percentage":9}))} > cal by 9 percentage </button>
          
     </div>
