@@ -6,7 +6,8 @@ export default function CounterPage(){
 
    const count =  useSelector((state) => state?.counter?.count)
    const dispatch = useDispatch()
-
+   
+   useSelector((state) => console.log(state))
 
     return <div>
          <h2> Counter Page </h2>
