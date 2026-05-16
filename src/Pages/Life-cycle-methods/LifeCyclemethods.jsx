@@ -3,28 +3,7 @@ import React from "react";
 export default class LifeCyclemethods extends React.Component {
 
 
-    constructor(props){
-        super(props)
-       
-
-        this.state= {
-            count : 0
-        }
-
-         console.log("1. inital Phase",this.state.count)
-    }
-
-    componentDidUpdate(){
-        console.log("4. updating phase",this.state.count)
-    }
-
-    componentDidMount(){
-        console.log("3. did mount phase")
-    }
-
-    componentWillUnmount(){
-        console.log("5. un mount phase")
-    }
+    
 
     render(){
 
