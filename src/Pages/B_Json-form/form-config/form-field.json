@@ -1,7 +1,7 @@
 
 [
     {   
-        "fieldLabel" : "User name",
+        "fieldLabelName" : "User name",
         "fieldType" : "text",
         "fieldname" : "username",
         "fieldID" : "username",
@@ -10,17 +10,50 @@
         "fieldCheckboxLabel":""
     },
     {   
-        "fieldLabel" : "Password",
+        "fieldLabelName" : "Password",
         "fieldType" : "password",
         "fieldname" : "password",
         "fieldID" : "password",
         "fieldClass" : "",
         "fieldDeafultValue" : "",
         "fieldCheckboxLabel":""
+    }, 
+    {   
+        "fieldLabelName" : "Temporary Address",
+        "fieldType" : "textarea",
+        "fieldname" : "temp-address",
+        "fieldID" : "",
+        "fieldClass" : "",
+        "fieldRow" : 10,
+        "fieldCol" : 30,
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel":" "
+    },
+
+     {   
+        "fieldLabelName" : "Parmenant Addressxx",
+        "fieldType" : "textarea",
+        "fieldname" : "pernament-address",
+        "fieldID" : "",
+        "fieldClass" : "",
+        "fieldRow" : 10,
+        "fieldCol" : 30,
+        "fieldDeafultValue" : "",
+        "fieldCheckboxLabel":" "
     },
 
     {   
-        "fieldLabel" : "",
+        "fieldLabelName" : "Country",
+        "fieldType" : "selectbox",
+        "fieldname" : "country",
+        "fieldID" : "country",
+        "fieldClass" : "",
+        "options" : ["india","pakistan","malasia","singapore"]
+    },
+
+
+     {   
+        "fieldLabelName" : "",
         "fieldType" : "checkbox",
         "fieldname" : "terms-of-condition",
         "fieldID" : "terms",
@@ -29,14 +62,16 @@
         "fieldCheckboxLabel":"All Terms of condition accept by my knowledge "
     },
     {   
-        "fieldLabel" : "",
+        "fieldLabelName" : "",
         "fieldType" : "submit",
         "fieldname" : "submit",
         "fieldID" : "submit",
         "fieldClass" : "",
-        "buttonText" : "Login",
+        "buttonText" : "Registration",
         "fieldDeafultValue" : "",
         "fieldCheckboxLabel": "",
         "disabled" : false
     }
+
+   
 ]

@@ -33,21 +33,54 @@ export default function JsonLoginForm() {
 
                     return <React.Fragment key={index}>
                         
-                        {(value.fieldType != "button" || value.fieldType != "submit") ?
+                        {(  value.fieldType != "button"  && 
+                            value.fieldType != "submit"  &&
+                            value.fieldType != "selectbox" &&
+                            value.fieldType != "textarea"
+                          ) ?
                             <div>
-                                <label htmlFor={value?.fieldID}> {value?.fieldLabel} </label>
+                                <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
                                 <input
                                     type={value?.fieldType}
                                     name={value?.fieldname}
+                                    className={value?.fieldClass}
                                     id={value?.fieldID}
                                     onChange={handleChange}
                                 />
                                 { (value?.fieldType =="checkbox") && (<label>{value?.fieldCheckboxLabel}</label>) }
                             </div>
                             :
+                            (value.fieldType == "selectbox") ?
+                            <div>
+                                 <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
+                                <select 
+                                    name ={value.fieldname} 
+                                    onChange={handleChange} 
+                                >
+                                    {value?.options.map( (country,index)  => <option value={country}> {country} </option> ) }
+                                </select>
+                            </div>
+                              
+                            :
+
+                            (value.fieldType == "textarea") ?
+                             <div>
+
+                                 <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
+                                 <textarea 
+                                    name={value?.fieldname}
+                                    rows = {value?.fieldRow}
+                                    cols = {value?.fieldCol}
+                                    onChange={handleChange}
+                                
+                                >  </textarea>
+                             </div>  
+                             
+                            :
+
                             <div>
                                 <button 
-                                    type={value.fieldID}
+                                    type={value?.fieldType}
                                     
                                 >{value.buttonText} </button>
                             </div>
