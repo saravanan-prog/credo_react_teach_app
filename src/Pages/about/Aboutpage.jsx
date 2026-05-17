@@ -1,12 +1,14 @@
+import styles from './aboutpage.module.css'
 
-import styles from './about-page.module.css'
-
-export default function Aboutpage(){
-
+export default function AboutPage(){
 
 
     return <div>
-        <h1 className={styles.title}>About Page</h1>
-         
+        <div className = {styles.title}>About Page</div>
+        <p style={{ color: "red", fontSize: "20px" }}> I am About page content </p>
+        <p> Hello...</p>
+        <h3> Example about page </h3>
+
+        <button className = "btn btn-danger"> press me </button>
     </div>
 }
