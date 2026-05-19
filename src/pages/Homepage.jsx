@@ -1,45 +1,42 @@
 import React from 'react'
+import CustomerList from './CustomerList'
 
-export default class HomePage extends React.Component {
+export default function Homepage(){
 
-    constructor() {
-        super()
-
-        this.state = {
-            candidateFirstname: "saravanan",
-            candidateAge: 28,
-            address: {
-                streetNumber: 22,
-                streetName: "1st cross st",
-                area: "velachery",
-                city: "chennai",
-                pincode: 606105
-            }
-        }
-
-    }
-
-    render() {
-        return <div>
-
-            <h1> I am a Class Component </h1>
-            <p><strong>Candidate Name : </strong> {this.state.candidateFirstname} </p>
-            <p><strong>Candidate Age : </strong> {this.state.candidateAge} </p>
-            <div><strong>Address  : </strong>
-            
-                {this.state.address.streetNumber + `, ` +
-                    this.state.address.streetName + `, ` +
-                    this.state.address.area + `, ` +
-                    this.state.address.city + `- ` +
-                    this.state.address.pincode
-
-                }
+    const customerName = "saravanan"
+    const customerAge = 27
+    const customerQualification = "MCA"
 
 
-            </div>
+    const customer = [
+        {
+        
+            customerName :  "saravanan",
+            customerAge : 27,
+            customerQualification : "MCA"
+        } ,
+        {
+        
+            customerName :  "Kiruba karan",
+            customerAge : 23,
+            customerQualification : "Maths"
+        } ,
+         {
+        
+            customerName :  "abinaya",
+            customerAge : 22,
+            customerQualification : "B.tech"
+        } 
+    ]
 
+    return <div>
+         <h2> Home Page </h2>
 
-        </div>
-    }
-
+         <CustomerList 
+            customerName = {customerName}
+            customerAge = {customerAge}
+            customerQualification= {customerQualification}
+            customer = {customer}
+         />
+    </div>
 }
