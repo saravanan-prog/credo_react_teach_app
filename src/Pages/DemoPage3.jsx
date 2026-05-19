@@ -1,13 +1,14 @@
 export default function DemoPage3() {
 
-  const producletAvailable =  false;
-  const product = ["apple","orange","grapes"]
+  const userAvaiable = false;
 
 
   return (
 
     <div>
-        <p> {producletAvailable ? product : "Currently product is out of stock" }   </p>
+        {userAvaiable && ( <p>User is Available right now </p> ) }
+
+        <p> User Status :  {userAvaiable ? "Online" : "Offline"} </p>
     </div>
 
   );
