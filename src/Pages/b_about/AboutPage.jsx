@@ -1,5 +1,6 @@
 import Header from "../../resuable-components/header/Header"
 import Footer from "../../resuable-components/footer/Footer"
+import CustomerList from "../../resuable-components/customer-data/CustomerList"
 
 
 export default function AboutPage(){
@@ -10,6 +11,7 @@ export default function AboutPage(){
 
             <div>
                 <p> I am about Page </p>
+                <CustomerList />
             </div>
 
         <Footer/>
