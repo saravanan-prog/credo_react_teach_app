@@ -1,15 +1,15 @@
 import React from 'react'
 
 export default function CustomerList(
-    {customer}
+    { handleClick }
 ){
 
-    console.log("props=======>",customer)
+    const recipie = "biriyani"
+   
 
     return <div>
-         <h4> Customer Names </h4>
-         {customer.map((value,index) =>
-            <p key={index}> {value?.customerName} - {value?.customerAge} - {value?.customerQualification} </p> 
-         )}
+         <h4>Child Component </h4>
+         
+         <button onClick = {()=>handleClick(recipie)} > click me </button>
     </div>
 }
