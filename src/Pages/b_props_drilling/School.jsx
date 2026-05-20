@@ -1,5 +1,5 @@
 import AdditinalInformation from "./components/AdditionalInfo"
-export default function Student(){
+export default function School(){
 
   const studentName = "saravanan"
   const studentAge = 27

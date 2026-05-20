@@ -1,4 +1,4 @@
-export default function Child( 
+export default function B_child( 
   { 
     studentname,
     studentAge,

@@ -1,6 +1,6 @@
-import Child from "./Child"
+import B_child from "./B_child"
 
-export default function Parent(){
+export default function A_parent(){
 
   const studentName = "saravanan"
   const studentAge = 27
@@ -18,7 +18,7 @@ export default function Parent(){
 
         <h3> I am Parent Component </h3>
          <hr/> 
-        <Child 
+        <B_child 
            studentname = {studentName}
            studentAge  = {studentAge}
            studentclasType = {studentclasType}

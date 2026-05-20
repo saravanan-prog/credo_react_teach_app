@@ -2,11 +2,11 @@
 
 
 import { useState } from "react"
-import Buttons from "./Child"
+import Child from "./Child";
 
 export default function Parent(){
 
-  const count = 0;
+  var count = 0;
   
   const clickme    = () => console.log("button is clicked")
   const clickedBy  = (name) => console.log("clicked By ====>", name)
@@ -16,7 +16,7 @@ export default function Parent(){
         <h1>  Parent Component Functional Props - understanding </h1>
 
 
-        <Buttons
+        <Child
             clickme   = {clickme}
             clickedBy = {clickedBy}
             addCount  = {addCount}
