@@ -1,23 +1,55 @@
 import React, { useState } from 'react'
-import CustomerList from './CustomerList'
 
 export default function Homepage(){
 
-    const [candidateName ,setCandidateName] = useState("saravanan")
-    const [skillset,setSkillset] = useState(["React","Angular","node","vuejs"])
-    const [experinece,setExperience] = useState(
-        {
-            "2022":"Tcs",
-            "2023" : "CTS",
-            "2024" : "Techmanindra"
-        }
-    )
-   
+    const [student,setStudnet] = useState( 
+       [ 
+            {
+                name : "saravanan",
+                age : 28,
+                school:"DAV matiriculation school"
+            },
+            {
+                name : "Kriubhja",
+                age : 24,
+                school:"DAV matiriculation school"
+            },
+            {
+                name : "Vignesh",
+                age : 24,
+                school:"DAV matiriculation school"
+            }
+       ]
+    ) 
 
     return <div>
-         <h2> Home Page  </h2>
-        <p> Canidate Name : {candidateName} </p>
-        <h3> Skill set </h3>
-        {skillset.map((value,index)=> <p> {value} </p>)}
+
+        {student.map((value,index) => {
+
+            return <div key={index}>
+                    <p> Name : {value.name } </p>
+                    <p> Age : {value.age } </p>
+                    <p> school : {value.school } </p>
+                    <hr/>
+                </div>
+
+        })}
+
+       
+
+       <button onClick = {
+            ()=>setStudnet( [
+                ...student,
+                {
+                    name:"vijayalakshmi",
+                    age : 24,
+                    school :"DAV"
+                }
+            ])
+        }>
+        Add New student
+        </button>
+
+    
     </div>
 }
