@@ -22,7 +22,7 @@ export default function DemoPage1() {
 
       <div>
         <span> Canidate Score : {score} </span>
-        <span> <button onClick={() => setScore( (prevState)=> prevState + 1 )}> Add Score </button> </span>
+        <span> <button onClick={() => setScore( (prevState) => prevState + 1 )}> Add Score </button> </span>
       </div>
     </div>
   );
