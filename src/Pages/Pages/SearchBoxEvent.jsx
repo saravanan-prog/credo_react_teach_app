@@ -7,9 +7,7 @@ export default function SearchBoxEvent() {
     const [fruit, setFruitList] = useState(fruitsData);
     const [searchText, setSearchText] = useState("");
 
-    const searchTextHandling = (event) => {
-        setSearchText(event.target.value);
-    };
+   
 
     const handleSearch = () => {
 
@@ -30,7 +28,7 @@ export default function SearchBoxEvent() {
             <div>
                 <input
                     type="text"
-                    onChange={searchTextHandling}
+                    onChange={(event) => setSearchText(event?.target?.value)}
                     value={searchText}
                 />
 

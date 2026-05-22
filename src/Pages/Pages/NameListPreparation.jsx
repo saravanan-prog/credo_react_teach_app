@@ -17,7 +17,7 @@ export default function NameListPreparation(){
         </div>
 
         <div>
-            <input type="text" onChange = {(e)=>setStudent(e?.target?.value)} />
+            <input type="text" onChange = {(event)=>setStudent(event?.target?.value)} />
             <button onClick={addNewStudent}> Add </button>
         </div>
 
