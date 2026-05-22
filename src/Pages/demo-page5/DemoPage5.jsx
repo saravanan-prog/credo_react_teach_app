@@ -8,15 +8,17 @@ export default function DemoPage5() {
 
 
   const addNewStudent = () => {
+    
+    let newStudent ={
+      name:"karupusamy",
+      age : 25,
+      course: "react"
+    }
 
     setStudentInfo(
       [
         ...studentInfo,
-        {
-          name: "Ramesh",
-          age: 28,
-          course: "Javascript",
-        },
+        newStudent
       ]
     );
 

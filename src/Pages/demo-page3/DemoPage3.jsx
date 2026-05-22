@@ -4,11 +4,15 @@ import React,{  useState } from "react";
 
 export default function DemoPage3() {
 
-  const [fruitsList, setFruitList] = useState(["apple", "orange", "grapes", "pineApple", "lichi"]);
+  const [ fruitsList, setFruitList] = useState( ["apple", "orange", "grapes", "pineApple", "lichi"] );
   
-  const handleDelete = (fruitIndex) => {
-    const updatedFruitsList = fruitsList.filter( (value,index) => index !=  fruitIndex )
+  const handleDelete = ( fruitIndex ) => {
+
+    
+    const updatedFruitsList = fruitsList.filter( (value,index) => index !=  fruitIndex )  // 2 -> 2
+
     setFruitList(updatedFruitsList)
+
   }
 
   return (
@@ -19,7 +23,8 @@ export default function DemoPage3() {
         {fruitsList.map((value, index) => {
 
           return <React.Fragment  key={index}>
-              <div> {value}
+              <div> 
+                  <span> {value} </span>
                   <span> <button onClick = {() => handleDelete(index)}> x </button> </span>
                </div>
               
