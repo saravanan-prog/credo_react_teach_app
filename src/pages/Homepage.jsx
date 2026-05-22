@@ -1,26 +1,10 @@
 import React, { useState } from 'react'
+import studentList from '../core/json/studentList.json'
 
 export default function Homepage(){
 
-    const [student,setStudnet] = useState( 
-       [ 
-            {
-                name : "saravanan",
-                age : 28,
-                school:"DAV matiriculation school"
-            },
-            {
-                name : "Kriubhja",
-                age : 24,
-                school:"DAV matiriculation school"
-            },
-            {
-                name : "Vignesh",
-                age : 24,
-                school:"DAV matiriculation school"
-            }
-       ]
-    ) 
+    
+    const [student,setStudnet] = useState(studentList) 
 
     return <div>
 
