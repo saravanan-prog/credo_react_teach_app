@@ -1,5 +1,7 @@
 
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+
 
 export default function DashboardPage(){
 
@@ -11,6 +13,9 @@ export default function DashboardPage(){
         navigate("/login")
 
     }
+
+
+
 
     return <div>
         <h1> Dashboard Page </h1>

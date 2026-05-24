@@ -1,8 +1,10 @@
 
 import styles from './home-page.module.css'
+import { useLocation } from 'react-router'
 
 export default function Homepage(){
 
+    console.log("useLocaiton====>",useLocation())
 
 
     return <div>

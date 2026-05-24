@@ -43,7 +43,6 @@ export const formSubmit = async (values,navigate) => {
     try{
         let response =  await fetch("https://fakestoreapi.com/auth/login",options)
         let responseData = await response.json()
-        console.log("responseData ====>",responseData)
         localStorage.setItem("token",responseData?.token)
         //navigation-code 
         navigate('/dashboard')

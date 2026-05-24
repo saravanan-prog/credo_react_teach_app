@@ -3,19 +3,19 @@ import { initalValue, validationSchema, formSubmit } from "./loginFormaction";
 import formFields from './form-field.json'
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import isAuth from "../../router/auth";
+import { auth } from "../../router/auth";
 
 export default function LoginForm() {
 
     const navigate = useNavigate()
 
+
     useEffect(()=>{
-
-        if(isAuth())
+        if(auth())
             navigate('/dashboard')
-
     },[])
 
+   
     return <div>
 
         <Formik

@@ -1,29 +1,13 @@
-
-import { Link } from "react-router-dom";
+import { Link } from "react-router"
 
 
 export default function Header() {
 
-   
 
-    return <div>
-            <div className="common-menus">
-                <nav className="nav">
+    return <div className ="bg-primary">
 
-                    <div className="nav-item">
-                        <Link to="/home">home</Link>
-                    </div>
-                    <div className="nav-item">
-                        <Link to="/about">about</Link>
-                    </div>
-                    <div className="nav-item">
-                        <Link to="/blog">blog</Link>
-                    </div>
-                    <div className="nav-item">
-                        <Link to="/contact">contact</Link>
-                    </div>
-                </nav>
-            </div>
-           
+        <p> <Link to = {"/home"} className="text-white"> Home </Link></p>
+        <p> <Link to = {"/about"}  className="text-white"> About </Link></p>
+        <p> <Link to = {"/blogs"}  className="text-white"> Blog </Link></p>
     </div>
 }

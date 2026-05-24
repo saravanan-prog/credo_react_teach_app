@@ -1,14 +1,14 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom"
-import Header from '../core/resusble-components/Header'
+import { BrowserRouter,Routes,Route} from "react-router-dom"
+import Header from "../core/resusble-components/Header"
 import Homepage from '../Pages/home/Homepage'
 import Aboutpage from '../Pages/about/Aboutpage'
-import Blogpage from '../Pages/blog/BlogPage'
-import Contactpage from '../Pages/contact/ContactPage'
-import ProductsPage from '../Pages/products/ProductsPage'
-import DashboardPage from '../Pages/dashboard/DashboardPage'
+import BlogPage from '../Pages/blog/BlogPage'
 import LoginForm from '../Pages/Login/LoginForm'
+import DashboardPage from '../Pages/dashboard/DashboardPage'
+import ProductsPage from '../Pages/products/ProductsPage'
 import ProtectionRoute from "./ProtectionRoute"
-import ViewFullProduct from '../Pages/products/view-product/ViewFullProduct'
+import ViewFullProduct from "../Pages/products/view-product/ViewFullProduct"
+
 
 
 export default function MainRoute(){
@@ -18,22 +18,41 @@ export default function MainRoute(){
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route index element = { <ProductsPage/>} />
-                <Route path ="home" element = {<Homepage/>} />
-                <Route path ="about" element = {<Aboutpage/>} />
-                <Route path ="blog" element = {<Blogpage/>} />
-                <Route path ="contact" element = {<Contactpage/>} />
-                <Route path ="products" element = {<ProductsPage/>} />
-                <Route path="viewproduct" element = {<ViewFullProduct/>} />
-                <Route path="viewproduct/:id" element = {<ViewFullProduct/>} />
-                <Route path ="login" element = {<LoginForm/>} />
-                <Route path ="dashboard" element = {
+                <Route index element={ <Homepage />} />
+                <Route path="home" element = {<Homepage />} />
+                <Route path="about" element = {<Aboutpage />} />
+                <Route path="blogs" element = {<BlogPage />} />
+                <Route path = "login" element = {<LoginForm/>} />
+
+
+
+                <Route path = "dashboard" element ={
                     <ProtectionRoute>
-                        <DashboardPage/>
+                        <DashboardPage />
                     </ProtectionRoute>
-                    }
-                />
-                <Route path ="*" element = {<h3> 400 Page Not found </h3>} />
+                    
+                    } />
+
+                <Route path="products" element ={
+                    <ProtectionRoute>
+                        <ProductsPage />
+                    </ProtectionRoute>
+                } />
+
+                <Route path="viewproduct/:id" element = {
+                    <ProtectionRoute>
+                        <ViewFullProduct />
+                    </ProtectionRoute>
+                } />
+
+                <Route path="viewproduct/:id/:product" element = {
+                    <ProtectionRoute>
+                        <ViewFullProduct />
+                    </ProtectionRoute>
+                } />
+
+
+                <Route path="*" element={ <h3> 404 Page Not Found </h3> } />
             </Routes>
         </BrowserRouter>
     </div>
