@@ -2,29 +2,21 @@ import { useState } from "react"
 
 export default function BasicForm() {
 
-    const [formData,setFormData] = useState({})
+    const [loginData,setLoginData] = useState({})
 
-
-    const handleChange =(event) => {
-
-        const name   = event?.target?.name
-        const value  = event?.target?.value
-
-        setFormData( {...formData, [name] : value })
-
-    
+    const handleChange = (event) => {
+        
+        const fieldName =  event?.target?.name;
+        const fieldValue = event?.target?.value;
+        setLoginData({...loginData, [fieldName] : fieldValue})  
+        
     }
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log("Your form is submitted===>",formData)
-
-        //api - code
-        
-
+        console.log("Form is submitted",loginData)
     }
-
-
 
 
 
@@ -32,14 +24,14 @@ export default function BasicForm() {
     return <div>
         <div className="title"> <h3> React Form </h3></div>
         <div>
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit = {handleSubmit}>
                 <div>
                     <label htmlFor="username">User name </label>
                     <input
                         type="text"
                         name="username"
                         id="username"
-                        onChange={handleChange}
+                        onChange = {handleChange}
                     />
                 </div>
                 <div>
@@ -48,7 +40,8 @@ export default function BasicForm() {
                         type="password"
                         name="password"
                         id="password"
-                        onChange={handleChange}
+                        onChange = {handleChange}
+                        
                     />
                 </div>
                 <div>

@@ -8,23 +8,7 @@ const initalValue = {
     password: ""
 }
 
-const validationSchema = Yup.object(
-    {
-        username: Yup.string()
-            .required("Username is required")
-            .email("username is must be email format"),
 
-        password: Yup.string()
-            .required("Pasword is required")
-            .min(6, "Password must be minimu 6 letters")
-            .matches(/[A-Z]/, "One uppercase required")
-            .matches(/[0-9]/, "One number required")
-            .matches(/[!@#$%^&*]/, "One special char required")
-
-
-
-    }
-)
 
 export default function BasicFormikYup() {
 
@@ -34,7 +18,7 @@ export default function BasicFormikYup() {
 
         <Formik
             initialValues={initalValue}
-            validationSchema={validationSchema}
+            // validationSchema={validationSchema}
 
             onSubmit={(values, { resetForm }) => {
                 console.log("Form is submitted", values)

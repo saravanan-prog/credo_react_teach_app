@@ -1,6 +1,6 @@
 import { useState } from "react"
 import React from "react"
-import Formfields from './form-config/form-field.json'
+import formFields from './form-config/form-field.json'
 
 export default function JsonLoginForm() {
 
@@ -29,67 +29,28 @@ export default function JsonLoginForm() {
         <div className="title"> <h3> Json Login Form </h3></div>
         <div>
             <form onSubmit={handleSubmit} >
-                {Formfields.map((value, index) => {
+               {(formFields.length !=0 ) ?
+                formFields.map((value,index) => {
 
-                    return <React.Fragment key={index}>
-                        
-                        {(  value.fieldType != "button"  && 
-                            value.fieldType != "submit"  &&
-                            value.fieldType != "selectbox" &&
-                            value.fieldType != "textarea"
-                          ) ?
-                            <div>
-                                <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
-                                <input
-                                    type={value?.fieldType}
-                                    name={value?.fieldname}
-                                    className={value?.fieldClass}
-                                    id={value?.fieldID}
-                                    onChange={handleChange}
+                    return <div key ={index}>
+                        <label htmlFor={value?.fieldId}> {value.fieldLabel} </label>
+
+
+                            <input
+                                type = {value?.fieldType}
+                                name = {value?.fieldName}
+                                id = {value?.fieldId}
+                                onChange = {handleChange}
                                 />
-                                { (value?.fieldType =="checkbox") && (<label>{value?.fieldCheckboxLabel}</label>) }
-                            </div>
-                            :
-                            (value.fieldType == "selectbox") ?
-                            <div>
-                                 <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
-                                <select 
-                                    name ={value.fieldname} 
-                                    onChange={handleChange} 
-                                >
-                                    {value?.options.map( (country,index)  => <option value={country}> {country} </option> ) }
-                                </select>
-                            </div>
-                              
-                            :
+                        {value.fieldType =="checkbox" && <label htmlFor="checkbox-label"> checkbox Label </label> } 
+                    </div>
+                })
+                    
+                :
+                <div></div>
 
-                            (value.fieldType == "textarea") ?
-                             <div>
-
-                                 <label htmlFor={value?.fieldID}> {value?.fieldLabelName} </label>
-                                 <textarea 
-                                    name={value?.fieldname}
-                                    rows = {value?.fieldRow}
-                                    cols = {value?.fieldCol}
-                                    onChange={handleChange}
-                                
-                                >  </textarea>
-                             </div>  
-                             
-                            :
-
-                            <div>
-                                <button 
-                                    type={value?.fieldType}
-                                    
-                                >{value.buttonText} </button>
-                            </div>
-
-                        }
-
-                    </React.Fragment>
-                })}
-
+               }
+                
             </form>
         </div>
     </div>

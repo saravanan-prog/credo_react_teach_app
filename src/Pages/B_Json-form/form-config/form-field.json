@@ -1,77 +1,29 @@
-
 [
-    {   
-        "fieldLabelName" : "User name",
-        "fieldType" : "text",
-        "fieldname" : "username",
-        "fieldID" : "username",
-        "fieldClass" : "",
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel":""
+    {
+        "fieldLabel"  :  "User Name",
+        "fieldType"   :  "text",
+        "fieldName"   :  "username",
+        "fieldId"     : "username",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
     },
-    {   
-        "fieldLabelName" : "Password",
-        "fieldType" : "password",
-        "fieldname" : "password",
-        "fieldID" : "password",
-        "fieldClass" : "",
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel":""
-    }, 
-    {   
-        "fieldLabelName" : "Temporary Address",
-        "fieldType" : "textarea",
-        "fieldname" : "temp-address",
-        "fieldID" : "",
-        "fieldClass" : "",
-        "fieldRow" : 10,
-        "fieldCol" : 30,
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel":" "
+    {
+        "fieldLabel"  :  "Password",
+        "fieldType"   :  "text",
+        "fieldName"   :  "password",
+        "fieldId"     : "username",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
     },
-
-     {   
-        "fieldLabelName" : "Parmenant Addressxx",
-        "fieldType" : "textarea",
-        "fieldname" : "pernament-address",
-        "fieldID" : "",
-        "fieldClass" : "",
-        "fieldRow" : 10,
-        "fieldCol" : 30,
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel":" "
-    },
-
-    {   
-        "fieldLabelName" : "Country",
-        "fieldType" : "selectbox",
-        "fieldname" : "country",
-        "fieldID" : "country",
-        "fieldClass" : "",
-        "options" : ["india","pakistan","malasia","singapore"]
-    },
-
-
-     {   
-        "fieldLabelName" : "",
-        "fieldType" : "checkbox",
-        "fieldname" : "terms-of-condition",
-        "fieldID" : "terms",
-        "fieldClass" : "",
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel":"All Terms of condition accept by my knowledge "
-    },
-    {   
-        "fieldLabelName" : "",
-        "fieldType" : "submit",
-        "fieldname" : "submit",
-        "fieldID" : "submit",
-        "fieldClass" : "",
-        "buttonText" : "Registration",
-        "fieldDeafultValue" : "",
-        "fieldCheckboxLabel": "",
-        "disabled" : false
+    {
+        "fieldLabel"  :  "",
+        "fieldType"   :  "submit",
+        "fieldName"   :  "Login",
+        "fieldId"     : "login",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "Login"
     }
-
-   
 ]
