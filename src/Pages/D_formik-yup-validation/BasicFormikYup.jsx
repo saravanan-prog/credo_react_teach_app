@@ -59,8 +59,9 @@ export default function BasicFormikYup() {
             }
 
 
-            onSubmit={(values) => {
+            onSubmit={(values,{ resetForm }) => {
                 console.log("values====>", values)
+                resetForm()
             }}
         >
 
