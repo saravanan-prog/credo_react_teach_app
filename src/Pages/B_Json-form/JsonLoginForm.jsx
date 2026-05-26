@@ -1,57 +1,75 @@
-import { useState } from "react"
-import React from "react"
-import formFields from './form-config/form-field.json'
+import { useState } from "react";
+import React from "react";
+import formFields from "./form-config/form-field.json";
 
 export default function JsonLoginForm() {
+  const [formState, setFormState] = useState(
+    
+  );
 
-    const [formState, setFormState] = useState()
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setFormState({ ...formState, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //api-code
+
+    console.log("formState=====>", formState);
+  };
+
+  return (
+    <div>
+      <div className="title">
+        <h3> Json Login Form </h3>
+      </div>
+      <div>
+        <form onSubmit={handleSubmit}>
+          { formFields.map((value, index) => {
+              return (
+                <div key={index}>
+                  <label htmlFor={value?.fieldId}> {value.fieldLabel} </label>
+
+                  { value?.fieldType != "select" &&
+                    value?.fieldType != "textarea" && (
+                      <input
+                        type={value?.fieldType}   // text password date checkbox radiobox submit button
+                        name={value?.fieldName}
+                        id={value?.fieldId}
+                        onChange={handleChange}
+                      />
+                    )}
 
 
-    const handleChange = (event) => {
-
-        const name = event.target.name
-        const value = event.target.value
-
-        setFormState({ ...formState, [name]: value })
-
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        //api-code
-
-        console.log("formState=====>", formState)
-
-    }
+                    {( value?.fieldType =="textarea") && (
+                      <textarea
+                        name={value?.fieldName}
+                        rows={10}
+                        cols={10}
+                        onChange={handleChange}
+                      ></textarea>
+                    )}
 
 
-    return <div>
-        <div className="title"> <h3> Json Login Form </h3></div>
-        <div>
-            <form onSubmit={handleSubmit} >
-               {(formFields.length !=0 ) ?
-                formFields.map((value,index) => {
+                     {( value?.fieldType =="select") && (
+                      <select
+                        name={value?.fieldName} 
+                        onChange={handleChange}
+                       >
+                        {value?.fieldOption.map((value,index) =>  <option value = {value} key={index}>{value}</option>)}
+                      </select>
+                       
+                    )}
 
-                    return <div key ={index}>
-                        <label htmlFor={value?.fieldId}> {value.fieldLabel} </label>
-
-
-                            <input
-                                type = {value?.fieldType}
-                                name = {value?.fieldName}
-                                id = {value?.fieldId}
-                                onChange = {handleChange}
-                                />
-                        {value.fieldType =="checkbox" && <label htmlFor="checkbox-label"> checkbox Label </label> } 
-                    </div>
-                })
-                    
-                :
-                <div></div>
-
-               }
-                
-            </form>
-        </div>
+                </div>
+              );
+            })
+        }
+        </form>
+      </div>
     </div>
+  );
 }
