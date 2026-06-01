@@ -5,19 +5,42 @@ export default function Products(){
     const[productList,setProductList] = useState()
     const [page,setPage] = useState(1)
 
+
     useEffect(()=>{
-         
-        getApicall()
+         // mounting phase
+        const controller = new AbortController()
 
-    },[page])
+        getApicall(controller)
+
+        return(()=>{
+            controller.abort()
+        })
+       
+
+    },[page])  //updating phase
 
 
 
 
-    const getApicall = async () =>{
-        let response = await fetch(`https://fakestoreapi.com/products/${page}`)
-        let responseData = await response.json()
-        setProductList(responseData)
+    const getApicall = async (controller) =>{
+
+        try{
+            let response = await fetch(
+                `https://fakestoreapi.com/products/${page}` ,
+                {
+                    signal:controller.signal
+                }
+
+
+            )
+            let responseData = await response.json()
+            setProductList(responseData)
+         }
+        catch(error){
+            console.log("error====>",error)
+        }
+
+        
     }
 
 
@@ -35,9 +58,18 @@ export default function Products(){
             <div>
                  <button
                      disabled = { page == 1 }
-                     onClick = {()=>setPage( page - 1 )}> Prev </button>
+                     onClick = { ()=>setPage( page - 1 )} > Prev </button>
                 <button onClick = {()=>setPage( page + 1 )}> Next </button>
             </div>
          </div>
+
+
+
+
+
+
+
+
+
     </div>
 }
