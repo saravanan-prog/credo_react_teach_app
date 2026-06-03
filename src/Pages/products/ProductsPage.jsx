@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 
 export default function ProductsPage(){
     const [products,setProducts] = useState()
+    
     useEffect(()=>{
         getPrdocuts()
     },[])
