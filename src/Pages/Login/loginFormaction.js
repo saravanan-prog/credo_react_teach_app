@@ -20,8 +20,7 @@ export const validationSchema = Yup.object({
 
 export const formSubmit = async (values,navigate) => {
 
-    console.log("values====>",values,"navigate====>",navigate)
-    
+
 
     let payload = {
 
@@ -45,7 +44,7 @@ export const formSubmit = async (values,navigate) => {
         let responseData = await response.json()
         localStorage.setItem("token",responseData?.token)
         //navigation-code 
-        navigate('/dashboard')
+         navigate('/dashboard')
         
     }
     catch(error){
