@@ -1,17 +1,19 @@
 import { useContext } from "react"
-import { DashboardContext } from "../../../core/context/genralContext"
-import { BasicPagesettingcontext } from "../../../core/context/genralContext"
+import { HomeContext } from "../../../core/context/contextStore"
+
 
 export default function ComponentD(){
 
-    const data = useContext(DashboardContext)
-    const basicPageSetup = useContext(BasicPagesettingcontext)
+    const data = useContext(HomeContext)
 
-    console.log("data====>",data,"basicPageSetup===>",basicPageSetup)
+
+    console.log("data=====>",data)
 
 
     return <div>
          <p> ComponentD </p>
+         <p> studnet name : {data?.studentName}</p>
+         
     </div>
 
 }
