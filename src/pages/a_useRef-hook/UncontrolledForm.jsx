@@ -6,11 +6,22 @@ export default function UnControlledForm(){
     const formRef = useRef()
 
    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        
+        const payload = {
+            "username" : formRef?.current[0]?.value,
+            "password":  formRef?.current[1]?.value
+        }
+
+        console.log("payload====>",payload)
+        //api-code
+    }
 
     
 
     return <div>
-        <form ref={formRef}>
+        <form ref={formRef} onSubmit = {handleSubmit}>
             <div>
                 <label>User name</label>
                 <input type="text" name="username" />
