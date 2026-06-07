@@ -1,12 +1,7 @@
-import React,{lazy,Suspense} from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-// import UserList from "./Pages/customers/UsersList";
-// import LoginPage from "./Pages/login/LoginPage";
-// import DashboardPage from "./Pages/dashboard/DashboardPage";
-
-const UserList = lazy( ()=> import("./Pages/customers/UsersList"))
-
-
+import Parentcomponent from "./Pages/b_use-callback/Parentcomponent";
+import MainRouter from "./Pages/router/MainRouter";
 
 
 
@@ -14,9 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback = {<h1> Loading... saravanan </h1>}>
-         <UserList />
-    </Suspense>
-    
+    <MainRouter />
   </React.StrictMode>
 );
