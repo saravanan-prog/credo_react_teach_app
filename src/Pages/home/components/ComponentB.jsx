@@ -8,7 +8,7 @@ export default function ComponentB(){
     const item = useContext(HomeContext)
 
     return <div>
-         <p> ComponentB </p>
+         <h5> ComponentB </h5>
          <p> Student Age : {item?.studentAge}</p>
          <ComponentC />
     </div>

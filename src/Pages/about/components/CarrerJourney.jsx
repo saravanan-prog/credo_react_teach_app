@@ -3,7 +3,7 @@ import { useContext } from "react"
 
 export default function CarrerJourney(){
 
-    const {careers} = useContext(AboutContext)
+    const { careers } = useContext(AboutContext)
     
     return <div>
         <h3> Carrer Journey </h3>

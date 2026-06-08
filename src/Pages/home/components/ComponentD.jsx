@@ -11,8 +11,9 @@ export default function ComponentD(){
 
 
     return <div>
-         <p> ComponentD </p>
-         <p> studnet name : {data?.studentName}</p>
+         <h5> ComponentD </h5>
+         <p> Studnet name : {data?.studentName}</p>
+         <p> Student Age : {data?.studentAge} </p>
          
     </div>
 

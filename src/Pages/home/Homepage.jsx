@@ -5,8 +5,8 @@ import { HomeContext} from "../../core/context/contextStore";
 
 export default function HomePage(){
     
-    const [studentName,setStudentName] = useState("Saravanan")
-    const [studentAge,setStudentAge] = useState(27)
+   const studentName = "saravanan"
+   const studentAge = 27
 
 
     return <div>
@@ -14,7 +14,12 @@ export default function HomePage(){
 
 
         <div>
-            <HomeContext.Provider value={{"studentName":studentName,"studentAge":studentAge}}>
+            <HomeContext.Provider value = {
+                {
+                    "studentName":studentName,
+                    "studentAge":studentAge
+                }
+            }>
                 <ComponentA />
             </HomeContext.Provider>
             

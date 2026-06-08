@@ -30,10 +30,12 @@ export default function AboutPage(){
     return <div>
          <p> About page </p>
         <div>
-            <AboutContext.Provider value={{
-                "personalInformation":personalInformation,
-                "careers" :careerJourney
-            }}>
+            <AboutContext.Provider value={
+                {
+                    "personalInformation":personalInformation,
+                    "careers" :careerJourney
+                }
+            }>
                 <PersonalInforamtion />
             </AboutContext.Provider>
         </div>

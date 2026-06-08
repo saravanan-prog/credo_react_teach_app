@@ -5,7 +5,7 @@ export default function ComponentC(){
 
 
     return <div>
-         <p> ComponentC </p>
+         <h5> ComponentC </h5>
          <ComponentD />
     </div>
 
