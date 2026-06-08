@@ -3,17 +3,19 @@ import ComponentA from './components/ComponentA'
 import tamilContent from '../../core/lang/tamil.json'
 import englishContent from '../../core/lang/en.json'
 
-import {MainContext} from "../../core/context/contextStore";
+import { MainContext } from "../../core/context/contextStore";
 
 
 export default function HomePage(){
     
     const[pageContent,setPageContent] = useState(null)
-    const mainData = useContext(MainContext)
 
+    const mainData = useContext(MainContext)
+    const { language,mode } = mainData.basicPageSetup
+    
     useEffect(()=>{
 
-        if(mainData.basicPageSetup.language == "tamil")
+        if( language == "tamil")
             setPageContent(tamilContent)
         else
             setPageContent(englishContent)
@@ -22,8 +24,8 @@ export default function HomePage(){
     
 
 
-    return <div>
-        <h1> {pageContent?.home_lg } </h1>
+    return <div style = {mode == 'dark' ? {backgroundColor:"black",color:"white"} :{backgroundColor:"white",color:"black"} }>
+        <h1> {pageContent?.homeLabel_lg } </h1>
 
 
         <div>
