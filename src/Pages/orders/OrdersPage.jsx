@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router";
 
 
-export default function DashboardPage(){
+export default function OrdersPage(){
 
     const navigate = useNavigate()
 
@@ -14,11 +14,8 @@ export default function DashboardPage(){
 
     }
 
-
-
-
     return <div>
-        <h1> Dashboard Page </h1>
+        <h1> Ordders Page </h1>
         <button onClick= {handleLogout}> logout </button>
     </div>
 }

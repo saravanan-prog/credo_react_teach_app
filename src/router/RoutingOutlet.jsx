@@ -6,6 +6,7 @@ import PageNotFound from "../Pages/pagenotFound/PageNotFound"
 import Header from "../core/resusble-components/Header"
 import LoginForm from "../Pages/Login/LoginForm"
 import ProtectionRoute from "./ProtectionRoute"
+import OrdersPage from "../Pages/orders/OrdersPage"
 
 
 export default function RoutingOutlet(){
@@ -22,6 +23,13 @@ export default function RoutingOutlet(){
                 <Route path="dashboard" element= { 
                     <ProtectionRoute>
                          <DashboardPage /> 
+                    </ProtectionRoute>
+                    }  
+                />
+
+                 <Route path="orders" element= { 
+                    <ProtectionRoute>
+                         <OrdersPage /> 
                     </ProtectionRoute>
                     }  
                 />
