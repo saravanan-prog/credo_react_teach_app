@@ -2,4 +2,5 @@ import { createContext } from "react";
 
 
 export const HomeContext =  createContext();
-export const MainContext =  createContext();
+export const AboutContext = createContext();
+
