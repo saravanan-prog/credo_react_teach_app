@@ -6,10 +6,7 @@ export default function ComponentA(  ){
 
     return <div>
          <p> ComponentA </p>
-         <ComponentB 
-            
-         
-         />
+         <ComponentB />
     </div>
 
 }

@@ -3,18 +3,12 @@ import ComponentA from './components/ComponentA'
 import tamilContent from '../../core/lang/tamil.json'
 import englishContent from '../../core/lang/en.json'
 
-import { HomeContext,MainContext} from "../../core/context/contextStore";
-
-
-
+import {MainContext} from "../../core/context/contextStore";
 
 
 export default function HomePage(){
+    
     const[pageContent,setPageContent] = useState(null)
-    const [studentName,setStudentName] = useState("Saravanan")
-    const [studentAge,setStudentAge] = useState(27)
-
-
     const mainData = useContext(MainContext)
 
     useEffect(()=>{
@@ -22,7 +16,7 @@ export default function HomePage(){
         if(mainData.basicPageSetup.language == "tamil")
             setPageContent(tamilContent)
         else
-             setPageContent(englishContent)
+            setPageContent(englishContent)
 
     },[])
     
@@ -33,10 +27,7 @@ export default function HomePage(){
 
 
         <div>
-            <HomeContext.Provider value={{"studentName":studentName,"studentAge":studentAge}}>
-                <ComponentA />
-            </HomeContext.Provider>
-            
+            <ComponentA />  
         </div>
 
         
