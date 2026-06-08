@@ -5,10 +5,7 @@ export default function Calculator(){
     
     const [count,setCount] = useState(0)
 
-    const sampleFun = useCallback(()=>{
-        console.log("sample function is triggred...")
-    },[])
-
+  
    
     
     return <div>
