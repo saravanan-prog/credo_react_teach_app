@@ -1,23 +1,18 @@
-import { useEffect } from "react"
-import {useRandom,useLang} from '../../core/hooks/customhook'
+
+import { useAuthor, useLang } from "../../core/hooks/customHook"
 
 
 export default function DemoPage(){
 
-    const content = useLang('tn')
-    const otp     = useRandom()
+   const author = useAuthor() 
+   const content = useLang('ml')
 
-    useEffect(()=>{
-        console.log("content====>",content)
+   console.log('content===>',content)
 
-    },[])
-    
-    //Success state
-    return (
-        <div>
-            <h1>{content?.demoPage_lg} </h1>
-            <p> {content?.email_lg} : saravanan.mca1992@gmail.com</p>
-            <p> Otp : {otp} </p>
+   return <div>
+        <div className="title">
+            <h3> {content?.demoPage_lg} </h3>
+            <p> {author} </p>
         </div>
-    );
+   </div>
 }

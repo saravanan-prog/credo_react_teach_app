@@ -1,14 +1,21 @@
-import tamil from "../lang/tamil.json";
-import english from "../lang/en.json";
-import malayalam from "../lang/malayalam.json";
+import tamil from '../lang/tamil.json'
+import malayalam from '../lang/malayalam.json'
+import english from '../lang/en.json'
 
 
-export function useLang(prefferedLang) {
-  if (prefferedLang === "tn") return tamil;
-  else if (prefferedLang === "ml") return malayalam;
-  else if (prefferedLang === "en") return english;
+
+export function useAuthor(){
+
+    return "Website Author : Mr.Saravanan Durai"
 }
 
-export function useRandom() {
-  return Math.floor(Math.random() * 9000);
+export function useLang(lang){
+
+    if(lang=='tl')
+        return tamil
+    else if(lang == 'ml')
+        return malayalam
+    else 
+        return english
+
 }

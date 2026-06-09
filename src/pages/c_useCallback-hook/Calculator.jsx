@@ -4,7 +4,10 @@ export default function Calculator(){
 
     
     const [count,setCount] = useState(0)
-
+    
+    const doSomething = useCallback(() => {
+        console.log("do something")
+    },[])
   
    
     
