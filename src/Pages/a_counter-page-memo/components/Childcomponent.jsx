@@ -1,7 +1,7 @@
+import { memo } from 'react'
 
-import { memo } from "react"
 
-export default memo( function Childcomponent( {name}){
+export default memo( function Childcomponent( {name} ){
 
     console.log("child componet is rendering....")
 

@@ -14,7 +14,7 @@ export default function CounterPage(){
         </div>
 
         <div>
-            <Childcomponent name = {name}  />
+            <Childcomponent name = {name} />
         </div>
     </div>
 }

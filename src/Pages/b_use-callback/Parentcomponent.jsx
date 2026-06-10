@@ -1,9 +1,8 @@
-import { useState,useCallback,useMemo, use } from "react"
+import { useState,useCallback,useMemo, lazy,Suspense } from "react"
 
 
-import { lazy,Suspense } from "react"
+const Childcomponent = lazy(()=>import('./Childcomponent'))
 
-const  Childcomponent = lazy(()=>import('./Childcomponent'))
 
 export default function Parentcomponent(){
 
@@ -24,10 +23,10 @@ export default function Parentcomponent(){
        
 
         <div className ="child-component">
-            <Suspense fallback={<h1> Loading....</h1>}>
-                <Childcomponent showMessage={showMessage} />
+            <Suspense fallback={<h2>Child componet is loading...</h2>}>
+                <Childcomponent showMessage ={showMessage} />
             </Suspense>
-             
+              
         </div>
        
         
