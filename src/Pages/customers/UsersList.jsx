@@ -11,10 +11,17 @@ export default function UserList(){
     },[])
 
     const fetchUsers = async () => {
+        try{
+             let response = await axios.get("https://fakestoreapi.com/users")
+             console.log("response====>",response)
 
-        let response = await axios.get("https://fakestoreapi.com/users")
-        if(response?.data)
-            setUsers(response?.data)
+             if(response?.data)
+                setUsers(response?.data)
+        }
+        catch(error){
+            console.log(error)
+        }
+       
     }
 
 

@@ -8,13 +8,21 @@ export default function LoginPage(){
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        let payload = {
-            "username" : formRef.current[0].value,
-            "password" : formRef.current[1].value
+        try{
+            let payload = {
+                "username" : formRef.current[0].value,
+                "password" : formRef.current[1].value
+            }
+
+            let response = await axios.post("https://fakestoreapi.com/auth/login",payload)
+            console.log("response=====>",response)
+            localStorage.setItem("token",response?.data.token)
+        }
+        catch(error){
+            console.log("error===>",error?.message)
         }
 
-        let response = await axios.post("https://fakestoreapi.com/auth/login",payload)
-        localStorage.setItem(response?.data.token)
+        
 
     }
 
@@ -28,13 +36,10 @@ export default function LoginPage(){
             </div>
 
             <div>
-                <label> Passwprd </label>
+                <label> Password </label>
                 <input type="text" name="password" />
             </div>
 
-
-            
-             
             <button type ="submit" > Login </button>
         </form>
     </div>
