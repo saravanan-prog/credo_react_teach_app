@@ -11,6 +11,9 @@ export const reviewPageslice = createSlice(
             addcomments:(state,action) => {
                 state.comments.push(action.payload.comments)
             }
+        },
+        extraReducers:(builder)=>{
+            // Api handling
         }
     }
 )
