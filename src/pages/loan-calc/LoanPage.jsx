@@ -1,9 +1,14 @@
 import { useSelector,useDispatch } from "react-redux"
 import { calcIntrest,intrestBy } from "./loanpage.slice"
+import { useEffect } from "react"
 
 
 
 export default function LoanPage(){
+
+   
+     useSelector((state)=> console.log("state===>",state))
+   
 
    const count =  useSelector((state) =>  state.counter.count)
    const principalAmt = useSelector((state) => state.loanData.principalAmount)
