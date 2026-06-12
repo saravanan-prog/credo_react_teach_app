@@ -3,8 +3,13 @@ import { useSelector,useDispatch } from "react-redux"
 import { productsList } from "./api-thunk"
 
 export default function ProductPage(){
+  
+    const loading = useSelector((state)=> state?.product?.loading)
+    const error = useSelector((state)=> state?.product?.error)
+    const productList = useSelector((state)=> state?.product?.data)
+    useSelector((state)=> console.log(state))
 
-    const productList = useSelector((state)=> state.products.products)
+    console.log("productList===>",productList)
 
     const dispatch = useDispatch()
     useEffect(()=>{
@@ -14,7 +19,14 @@ export default function ProductPage(){
     
     return <div>
         <h1> Product Page </h1>
-        { JSON.stringify(productList)}
+        {
+            loading && <h1> Loading </h1>
+        }
+        {error  && <h1> error </h1>
+        }
+        {
+           productList && JSON.stringify(productList) 
+        }
 
 
     </div>

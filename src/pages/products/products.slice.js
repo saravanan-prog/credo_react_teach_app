@@ -9,7 +9,8 @@ export const productSlice = createSlice(
         initialState: {
             loading: false,
             error: null,
-            products: null
+            products: null,
+            
         },
         reducers: {},
         extraReducers: (builder) => {
@@ -19,7 +20,7 @@ export const productSlice = createSlice(
                 })
                 .addCase(productsList.fulfilled, (state, action) => {
                     state.loading = false
-                    state.products = action.payload
+                    state.data = action.payload
                 })
                 .addCase(productsList.rejected, (state) => {
                     state.loading = false

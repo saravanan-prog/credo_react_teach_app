@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
         <ProductPage />
-        <CounterPage />
+    
     </Provider>
      
   </React.StrictMode>
