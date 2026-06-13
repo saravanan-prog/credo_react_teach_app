@@ -1,17 +1,20 @@
+//createSlice
+
 import { createSlice } from "@reduxjs/toolkit";
 
 
 export const counterSlice = createSlice(
     {
-        name:"counter-app",
+        name:"counter-page",
 
-        initialState : {
+        initialState :{
             count : 0,
-            
+            applicationName:"Simple calculator"
         },
+
         reducers:{
-            add : (state,action) => {
-                 state.count += 1
+            add : (state,action)=>{
+                state.count += 1
             },
             sub : (state,action) => {
                 state.count -= 1
@@ -20,5 +23,5 @@ export const counterSlice = createSlice(
     }
 )
 
-export const { add,sub } = counterSlice.actions
+export  const {add,sub}  = counterSlice.actions
 export default counterSlice.reducer

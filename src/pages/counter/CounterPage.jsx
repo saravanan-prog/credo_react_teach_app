@@ -4,18 +4,20 @@ import { add,sub } from "./counter.slice"
 
 export default function CounterPage(){
 
-    const count  = useSelector( (state) =>state?.counter?.count )
+    useSelector((state) =>  console.log("state=====>",state) )
 
-    const dispatch = useDispatch()
+    const applicationName  = useSelector((state) =>  state.counterReducer.applicationName )
+    const count            = useSelector((state) =>  state.counterReducer.count )
+    const dispatch         = useDispatch()
 
     return <div>
-         <h2> Counter Page </h2>
-
-         <div className="counterInformation">
-            <h4> Count : {count} </h4>
-            <button onClick={() => dispatch(add())}> ADD </button>
-             <button onClick={() => dispatch(sub())} > SuB </button>
-         </div>
+        
+        <h2> {applicationName} </h2>
+        <div className="counterInformation">
+            <p> Count : {count} </p>
+            <button onClick = {() => dispatch(add())} > Add </button>
+            <button  onClick = {() => dispatch(sub())}> Sub </button>
+        </div>
      
     </div>
 } 
