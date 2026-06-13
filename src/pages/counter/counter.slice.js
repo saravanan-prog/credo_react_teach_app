@@ -3,8 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice =  createSlice({
     name:"counter-app",
+    
     initialState : {
-        count : 0
+        count : 0,
+        applicationName :"calculator app"
     },
     reducers :{
         addition : (state,action) => {

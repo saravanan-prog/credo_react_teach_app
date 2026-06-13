@@ -10,9 +10,9 @@ export default function LoanPage(){
      useSelector((state)=> console.log("state===>",state))
    
 
-   const count =  useSelector((state) =>  state.counter.count)
-   const principalAmt = useSelector((state) => state.loanData.principalAmount)
-   const IntrestRate = useSelector((state) => state.loanData.intrestRate)
+   const count =  useSelector((state) =>  state.counterReducer.count)
+   const principalAmt = useSelector((state) => state.loanpageReducer.principalAmount)
+   const IntrestRate = useSelector((state) => state.loanpageReducer.intrestRate)
 
 
    const dispatch = useDispatch()

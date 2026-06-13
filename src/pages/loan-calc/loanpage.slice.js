@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const loanpageSlice = createSlice( {
-    name : "loan-app",
+    name : "loan-page",
+    
     initialState : {
         principalAmount : 1000,
         intrestRate : 8
@@ -13,7 +14,10 @@ export const loanpageSlice = createSlice( {
             state.principalAmount += state.principalAmount * state.intrestRate / 100
         },
         intrestBy:(state,action) => {
-            console.log("state===>",state.principalAmount,"action===>",action.payload)
+
+            console.log("state===>",state.principalAmount,"action===>",action)
+
+            state.intrestRate = action.payload.percentage
             state.principalAmount += state.principalAmount * action.payload.percentage / 100
         }
     }

@@ -5,7 +5,7 @@ import { useRef } from "react"
 
 export default function ReviewsPage(){
 
-    const allComments = useSelector( state => state.reviews.comments)
+    const allComments = useSelector( state => state.reviewpageReducer.comments)
     const commentRef = useRef()
     const dispatch = useDispatch()
 
@@ -13,7 +13,7 @@ export default function ReviewsPage(){
         <h3> Reviews Page </h3>
         <div>
             <textarea name="review" id="review" rows={10} cols={10} ref={commentRef}> </textarea>
-            <button onClick ={()=>dispatch(addcomments( {comments:commentRef?.current?.value} ))} >ADD review</button>
+            <button onClick ={()=>dispatch(addcomments( {"comments":commentRef?.current?.value} ))} >ADD review</button>
         </div>
 
         <div>

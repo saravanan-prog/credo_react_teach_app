@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const reviewPageslice = createSlice(
     {
-        name:"review page app",
+        name:"reviews",
         initialState : {
             comments:[]
         },
