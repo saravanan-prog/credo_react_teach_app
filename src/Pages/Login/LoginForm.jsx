@@ -3,16 +3,12 @@ import { initalValue, validationSchema, formSubmit } from "./loginFormaction";
 import formFields from './form-field.json'
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import { auth } from "../../router/auth";
 
 export default function LoginForm() {
 
     const navigate = useNavigate()
 
-    useEffect(()=>{
-        if(auth())
-            navigate('/dashboard')
-    },[])
+    
 
     return <div>
 
