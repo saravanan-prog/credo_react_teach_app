@@ -1,36 +1,23 @@
 import { useEffect } from "react"
 import { useSelector,useDispatch } from "react-redux"
-import { productsList } from "./api-thunk"
+import { productList } from "./api-thunk"
+import { Link } from "react-router"
 
 export default function ProductPage(){
-  
-    
-
     const dispatch = useDispatch()
     useEffect(()=>{
-        dispatch(productsList())
+        dispatch(productList())
     },[])
-    
-    useSelector((state)=> console.log("State====>",state))
-    const loading = useSelector((state)=> state?.products?.loading)
-    const error = useSelector((state)=> state?.products?.error)
-    const productList = useSelector((state)=> state?.products?.data)
 
+    const {loading,error,data} = useSelector((state) =>state.productReducer)
 
-    console.log("productList===>",productList)
-
-    
     return <div>
-        <h1> Product Page </h1>
-        {
-            loading && <h1> Loading... </h1>
-        }
-        {error  && <h1> error </h1>
-        }
-        {
-           productList && JSON.stringify(productList) 
-        }
+         <h1> Product List Page </h1>
+         {loading && <h2>Loading....</h2>}
+         {error  && error}
+         {(!error && data) && JSON.stringify(data)}
 
-
+         <Link to={'/dashboard'}> Go to dashboard </Link>
     </div>
+    
 }

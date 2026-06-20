@@ -1,32 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { productsList } from "./api-thunk";
+import { productList } from "./api-thunk";
 
 
 
 export const productSlice = createSlice(
     {
-        name: "product-app",
-        initialState: {
-            loading: false,
-            error: null,
-            products: null,
-            
+        name : "prouducts",
+        initialState : {
+            loading : false,
+            error : null,
+            data : []
         },
-        reducers: {},
-        extraReducers: (builder) => {
-            builder
-                .addCase(productsList.pending, (state) => {
-                    state.loading = true
-                })
-                .addCase(productsList.fulfilled, (state, action) => {
-                    state.loading = false
-                    state.data = action.payload
-                })
-                .addCase(productsList.rejected, (state) => {
-                    state.loading = false
-                    state.error = "Something went wrong"
-                })
+        reducers:{},
+        extraReducers:(builder)=>{
+            builder.addCase(productList.pending,(state,action)=>{
+                state.loading = true
+            })
+            builder.addCase(productList.rejected,(state,action)=> {
+                state.loading = false
+                state.error  = " Something Went wrong "
+                state.data = []
+            })
+            builder.addCase(productList.fulfilled,(state,action)=>{
+                state.loading = false
+                state.error = null
+                state.data = action.payload
+            })
+            
         }
+        
     }
 )
 
