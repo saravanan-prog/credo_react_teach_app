@@ -1,4 +1,4 @@
-export default function DemoPage2() {
+export default function B_BasicState() {
 
   const candidateName = "Mohemed";
   const candidateDepositAmt = 100000.258525888;
