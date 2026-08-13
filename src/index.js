@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
 
 
 
@@ -8,7 +10,10 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    <p>Hello Welcome to React JS world</p>
-  </React.StrictMode>
+  <div>
+    {/* <HomePage /> */}
+    {/* <AboutPage /> */}
+    <BlogPage />
+
+  </div>
 );
