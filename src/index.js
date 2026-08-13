@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import DemoPage6 from './pages/DemoPage6'
-
-
-
-
-
+import DemoPage2 from './Pages/DemoPage2';
 
 
 
@@ -15,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-    <DemoPage6 />
+    <DemoPage2 />
   </React.StrictMode>
  
 );

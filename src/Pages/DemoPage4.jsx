@@ -4,13 +4,8 @@ export default function DemoPage4() {
   const fruitStatus = true;
 
   return (
-    <div>
-        {
-          fruitStatus ?
-            fruitsList.map((value,index) => <p key={index}> {value} </p> )
-          : 
-            "Fruits is out of stock"
-        }
-    </div>
+    <>
+      <h2> Fruits List </h2>
+    </>
   );
 }
