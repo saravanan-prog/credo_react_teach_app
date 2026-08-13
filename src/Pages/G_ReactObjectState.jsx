@@ -10,16 +10,16 @@ export default function G_ReactObjectState(){
         }
     )
 
+
+    
+
     return (
         <>
           <div> <h2> Employee Detail </h2></div>
           <div>
             <p> Employee Name : {employee.empid} </p>
             <p> Employee Desigination : {employee.empdesignation} </p>
-
           </div>
-        
-        
         </>
     )
 }

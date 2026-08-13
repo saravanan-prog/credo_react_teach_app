@@ -15,10 +15,7 @@ export default function F_ReactArrayUpdate() {
 
             return <React.Fragment key={key}>
               <div>
-                <span> {value} </span>
-                <span>
-                  <button> Remove </button>
-                </span>
+                 <p> {value} </p>
               </div>
             </React.Fragment>
 
