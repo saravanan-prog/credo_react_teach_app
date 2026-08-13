@@ -22,9 +22,6 @@ export default function H_ReactMultipleobject(){
         ]
     )
 
-
-    
-
     return (
         <>
           <div> <h2> Employee Detail </h2></div>
