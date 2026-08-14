@@ -11,9 +11,9 @@ export default function F_ReactArrayUpdate() {
       <div> <h1> Fruits List </h1> </div>
       <div>
         {
-          fruitsList.map((value, key) => {
+          fruitsList.map((value, index) => {
 
-            return <React.Fragment key={key}>
+            return <React.Fragment key={index}>
               <div>
                  <p> {value} </p>
               </div>

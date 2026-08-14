@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import G_ReactObjectState from './Pages/G_ReactObjectState';
+import E_ReactArrayState from './Pages/E_ReactArrayState';
 
 
 
@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-    <G_ReactObjectState />
+    <E_ReactArrayState />
   </React.StrictMode>
  
 );

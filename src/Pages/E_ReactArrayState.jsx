@@ -10,7 +10,7 @@ export default function E_ReactArrayState() {
 
             <div>
                 {
-                    fruitsList.map((value, key) => <p key={key}> {value} </p>)
+                    fruitsList.map((value, index) => <p key={index} > {value} </p>)
                 }
             </div>
 

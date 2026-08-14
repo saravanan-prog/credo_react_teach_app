@@ -1,19 +1,38 @@
 import { useState } from "react";
 
-export default function B_BasicState() {
+export default function C_ReactState() {
 
-  const [candidateName,setCandidatename] = useState("Saravanan")
-  const [depositAmout,setDepositamount]  = useState(25000)
-  const [returnAmount,setReturnAmount]   = useState(depositAmout - 6000)
-  
+  const[product,setProduct] = useState("Apple")
+  const [qty,setQty]        = useState(1)
+  const [price,setPrice]    = useState(10)
+
+  const addQty = () => {
+    let newQty = qty + 1
+    setQty(newQty)
+    setPrice(10 * newQty)
+
+  }
+
+  const decreaseQty = () => {
+    if (qty > 1) {
+      const newQty = qty - 1;
+      setQty(newQty);
+      setPrice(10 * newQty);
+    }
+  }
 
   return (
-
-    <div>
-      <p> Canidate Name  - {candidateName} </p>
-      <p> Candidate Deposit Amount - {depositAmout} </p>
-      <p> Return Amount : {returnAmount} </p>
-    </div>
-
+    <>
+      <div>
+          <p> Your Product : {product} </p>
+          <div> 
+              <p> Qunantity    </p>
+              <button onClick ={decreaseQty}> - </button>
+              <span> {qty} </span> 
+              <button onClick ={addQty}> + </button>
+          </div>
+          <p>Product Price : {price} </p>
+      </div>
+    </>
   );
 }
