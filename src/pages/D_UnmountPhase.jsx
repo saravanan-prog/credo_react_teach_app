@@ -51,6 +51,13 @@ export default class D_UnmountPhase extends Component {
             )
          
         })
+        .catch(error => {
+            if (error.name === "AbortError") {
+                console.log("Fetch request cancelled");
+            } else {
+                console.log("API Error:", error);
+            }
+        });
     }
 
     componentWillUnmount(){
