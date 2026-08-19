@@ -1,31 +1,23 @@
 import BchildComponent from "./BchildComponent"
- 
-
-export default function AparentComponent(){
 
 
-    const handleUpdate = () => {
-        console.log("Update function is triggred")
-    }
-
-    const handleDelete = (profile) => {
-
-        console.log("Update function is triggred",profile)
-    }
+export default function AparentComponent() {
 
 
+    const handleUpdate = () => console.log("Update function is triggred")
+    const handleDelete = () => console.log("Update function is triggred")
 
-    return(
+    return (
         <>
-          <div className="title"><h1> Functional Props </h1></div>
+            <div className="title"><h1> Functional Props </h1></div>
 
-          <BchildComponent  
-             handleUpdate = {handleUpdate}
-             handleDelete = {handleDelete}
-          
-          />
-        
-        
+            <BchildComponent
+                handleUpdate={handleUpdate}
+                handleDelete={handleDelete}
+
+            />
+
+
         </>
     )
 }

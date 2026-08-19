@@ -1,15 +1,17 @@
 import Exprience from "./Exprience";
 
-export default function Education( {skills} ){
+export default function Education({ studentdetails }) {
 
-
+    const { education, institution, academicYear } = studentdetails
 
     return (
-        <>  
-           <h1> Education</h1>
-        
-            <Exprience skills={skills} /> 
-        
+        <>
+            <div>
+                <p> He is completed {education} in {institution} academic {academicYear}  </p>
+            </div>
+
+            <Exprience studentdetails={studentdetails} />
+
         </>
     )
 }

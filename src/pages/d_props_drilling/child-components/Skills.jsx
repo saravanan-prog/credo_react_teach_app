@@ -1,15 +1,18 @@
-export default function Skills({skills}){
+export default function Skills({ studentdetails }) {
 
-
+    const { skills } = studentdetails
 
     return (
         <>
-          <h1>Skills</h1>
-        
             <div>
-                 {skills}
+                <h3>Skills</h3>
             </div>
-        
+            <div>
+                <ul>
+                    {skills.map((value, key) => <li key={key}>{value}</li>)}
+                </ul>
+            </div>
+
         </>
     )
 }
