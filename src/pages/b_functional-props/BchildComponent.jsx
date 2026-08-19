@@ -1,12 +1,24 @@
-export default function BchildComponent(){
+import { useState } from "react"
 
+export default function BchildComponent(
+    { 
+        handleUpdate,
+        handleDelete
+    }
+){
 
+    const [profile,setProfile] = useState(
+        {
+            name :"saravanan",
+            age  : 25
+        }
+    )
 
     return(
         <>
-          <div className="title"><h1> React Props </h1></div>
-
-
+          <p> Child Component </p>
+          <button onClick = { handleUpdate } > Update </button>
+          <button onClick = { () => handleDelete(profile) } > Delete </button>
         
         
         </>
