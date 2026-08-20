@@ -11,15 +11,15 @@ export default function SearchStudent() {
         const searchValue = searchByValue.trim().toLowerCase();
 
         if (searchValue === "") {
-            setStudents(studentDetails);
+            setStudents(students);
             return;
         }
 
-        const filteredRecord = studentDetails.filter((student) => {
+        const filteredRecord = studentDetails.filter((value) => {
 
             return (
-                student.name.toLowerCase() === searchValue ||
-                student.course.toLowerCase() === searchValue
+                value.name.toLowerCase() === searchValue ||
+                value.course.toLowerCase() === searchValue
             );
 
         });
