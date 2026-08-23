@@ -2,8 +2,6 @@ import { useState } from "react"
 
 export default function BasicForm() {
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("Form is submitted")
