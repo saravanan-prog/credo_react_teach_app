@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import SelectBoxEvents from './pages/SelectBoxEvents';
 
-import SearchBoxEvent from './Pages/Pages/SearchBoxEvent';
-import NameListPreparation from './Pages/Pages/NameListPreparation';
-import ChangeEvent from './Pages/Pages/ChangeEvent';
-import SelectBoxEvents from './Pages/Pages/SelectBoxEvents';
+
 
 
 
