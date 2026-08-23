@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import stateslist from "../assets/json/stateList.json";
-import citieslist from "../assets/json/cityList.json";
+import stateslist from "../../assets/json/stateList.json";
+import citieslist from "../../assets/json/cityList.json";
 
 export default function SelectBoxEvents() {
+    
     const [stateList, setStateList] = useState(stateslist);
     const [citiesList, setCitiesList] = useState(citieslist);
 
