@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import SelectBoxEvents from './pages/SelectBoxEvents';
-
-
+import C_CheckboxEvent from './pages/C_CheckboxEvent';
 
 
 
@@ -11,7 +8,7 @@ import SelectBoxEvents from './pages/SelectBoxEvents';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SelectBoxEvents />
+    <C_CheckboxEvent />
   </React.StrictMode>
 );
 

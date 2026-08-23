@@ -6,11 +6,11 @@ export default function ChangeEvent() {
   return (
     <>
       <div>
-        <label> Enter the text :</label>
-        <input type="text" onChange={(e) => setText(e?.target?.value)} />
+          <label> Enter the text :</label>
+          <input type="text" onChange={(e) => setText(e?.target?.value)} />
       </div>
       <div>
-         <p> Show text : {text} </p>
+          <p> Show text : {text} </p>
       </div>
     </>
   );

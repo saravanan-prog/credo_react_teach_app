@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 export default function BasicForm() {
+    const [loginData,setLoginData] = useState(null)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -20,7 +21,6 @@ export default function BasicForm() {
                                 type="text"
                                 name="username"
                                 id="username"
-
                             />
                         </div>
                         <div>
