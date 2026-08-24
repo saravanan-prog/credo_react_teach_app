@@ -1,73 +1,12 @@
-# React Task: Food Menu Filter
+1. Display your records
+    1. Studnet name
+    2. Student Contact   => email / Phone
+    3. Picked course
 
-### Filter: Select Box
+2. Create one ADD record button if i click the button show add form other wise not.
 
-### Filter Options:
+3. Create a form based on requirement.
 
-  All
-  South Indian Food
-  North Indian Food
-  Chinese
+4. Child -> parent receive the form data and add you list.
 
-
-### Food Menu Requirements
-
-Case 1: Initial Load
-
-  When the component loads initially, display all food items.
-
-  ```
-
-Filter:
-[ All ▼ ]
-
-Food Menu:
---------------------------------
-Id    Food Name        Category
---------------------------------
-1     Idli             South Indian
-2     Dosa             South Indian
-3     Paneer Tikka     North Indian
-4     Fried Rice       Chinese
-5     Naan             North Indian
-6     Noodles          Chinese
-
-```
-
-Case 2: Filter Selection
-
-  When the user selects a category from the dropdown, display only the food items belonging to that category.
-  If the user selects All, display all food items again.
-
-```
-Select → South Indian Food
-
-Food Menu:
-Idli
-Dosa
-
-```
-
-```
-Select → North Indian Food
-
-Food Menu:
-Paneer Tikka
-Naan
-
-```
-
-```
-Select → All
-
-Food Menu:
-Idli
-Dosa
-Paneer Tikka
-Fried Rice
-Naan
-Noodles
-
-```
-
-This is a good React exercise for practicing useState, onChange, and filter().#
+5. after added the list. disable the form.
