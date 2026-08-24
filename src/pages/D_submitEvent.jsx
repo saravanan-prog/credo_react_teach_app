@@ -1,11 +1,24 @@
 import { useState } from "react"
 
-export default function BasicForm() {
-    const [loginData,setLoginData] = useState(null)
+export default function D_submitEvent() {
+
+    const [loginData,setLoginData] = useState({})
+
+    const handleChange = (e) => {
+        const fieldname  =  e.target.name
+        const fieldValue =  e.target.value
+
+        setLoginData( 
+            {
+                ...loginData,
+                [fieldname] : fieldValue
+            }
+        )
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("Form is submitted")
+        console.log("Form is submitted",loginData)
     }
 
 
@@ -21,6 +34,7 @@ export default function BasicForm() {
                                 type="text"
                                 name="username"
                                 id="username"
+                                onChange = {handleChange}
                             />
                         </div>
                         <div>
@@ -29,6 +43,7 @@ export default function BasicForm() {
                                 type="password"
                                 name="password"
                                 id="password"
+                                onChange = {handleChange}
                             />
                         </div>
                         <div>
