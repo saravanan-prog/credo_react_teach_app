@@ -3,15 +3,16 @@ import React from "react";
 import formFields from "./form-config/form-field.json";
 
 export default function JsonLoginForm() {
-  const [formState, setFormState] = useState(
-    
-  );
+  const [formState, setFormState] = useState({});
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
 
-    setFormState({ ...formState, [name]: value });
+    setFormState(
+        { ...formState,
+           [name]: value
+        } );
   };
 
   const handleSubmit = (event) => {
@@ -29,8 +30,11 @@ export default function JsonLoginForm() {
       <div>
         <form onSubmit={handleSubmit}>
           { formFields.map((value, index) => {
+
+
               return (
                 <div key={index}>
+
                   <label htmlFor={value?.fieldId}> {value.fieldLabel} </label>
 
                   { value?.fieldType != "select" &&
@@ -44,11 +48,11 @@ export default function JsonLoginForm() {
                     )}
 
 
-                    {( value?.fieldType =="textarea") && (
+                    { ( value?.fieldType =="textarea" ) && (value?.fieldEnable) &&  (
                       <textarea
                         name={value?.fieldName}
-                        rows={10}
-                        cols={10}
+                        rows={value.fieldRow}
+                        cols={value.fieldcol}
                         onChange={handleChange}
                       ></textarea>
                     )}

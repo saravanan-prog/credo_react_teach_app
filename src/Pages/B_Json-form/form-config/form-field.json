@@ -25,6 +25,8 @@
         "fieldName"   :  "tempaddress",
         "fieldId"     : "tempaddress",
         "fieldClass"  :  "",
+        "fieldRow"     : 5,
+        "fieldcol"    : 5,
         "fieldEnable" :  true,
         "fieldDefaultValue" : ""
     },
@@ -35,6 +37,8 @@
         "fieldName"   :  "permanat-address",
         "fieldId"     : "tempaddress",
         "fieldClass"  :  "",
+         "fieldRow"     : 5,
+        "fieldcol"    : 5,
         "fieldEnable" :  true,
         "fieldDefaultValue" : ""
     },
