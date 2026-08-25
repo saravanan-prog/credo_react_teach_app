@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import C_CheckboxEvent from './pages/C_CheckboxEvent';
 
-import D_submitEvent from './pages/D_submitEvent';
 
 
 
@@ -9,7 +9,7 @@ import D_submitEvent from './pages/D_submitEvent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <D_submitEvent/>
+    <C_CheckboxEvent/>
   </React.StrictMode>
 );
 

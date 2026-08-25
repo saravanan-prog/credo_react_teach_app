@@ -11,7 +11,7 @@ export default function C_CheckboxEvent() {
                     <input 
                         type="checkbox" 
                         value="all" 
-                        checked={ choosedMenu === "all" }
+                        checked = { choosedMenu === "all" }
                         onChange = {(e)=>setChoosedMenu(e.target.value)}
                     />
                     <label> All Menu </label>
