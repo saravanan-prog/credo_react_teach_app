@@ -1,0 +1,48 @@
+[
+    {
+        "fieldLabel"  :  "Canidate name",
+        "fieldType"   :  "text",
+        "fieldName"   :  "canidatename",
+        "fieldId"     : "canidatename",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
+    },
+    {
+        "fieldLabel"  :  "Email",
+        "fieldType"   :  "text",
+        "fieldName"   :  "canidateEmail",
+        "fieldId"     : "canidateEmail",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
+    },
+    {
+        "fieldLabel"  :  "Password",
+        "fieldType"   :  "password",
+        "fieldName"   :  "candidtePassword",
+        "fieldId"     :  "candidtePassword",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
+    },
+    {
+        "fieldLabel"  :  "confirmPassword",
+        "fieldType"   :  "password",
+        "fieldName"   :  "confirmPassword",
+        "fieldId"     :  "confirmPassword",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
+    },
+    {
+        "fieldLabel"  : null,
+        "fieldType"   :  "submit",
+        "fieldName"   :  "Register",
+        "fieldId"     : "",
+        "fieldClass"  :  "",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : ""
+    }
+    
+]

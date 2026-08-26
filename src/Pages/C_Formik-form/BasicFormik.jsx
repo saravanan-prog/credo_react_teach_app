@@ -1,59 +1,44 @@
+import { Formik, Form, Field } from 'formik'
+import formFields from './form-field.json'
 
-import { Formik, Form, Field, FastField } from 'formik'
 
+const fields = {
+    username: "",
+    liveStatus: false
+}
 
 export default function BasicFormik() {
+    console.log("formFields====>", formFields)
 
+    return (
+        <>
+            <div><h3> Login Form </h3></div>
 
-    return <div>
-        <h3> Formik - Example </h3>
+            <Formik
+                initialValues={fields}
+                onSubmit={(values) => console.log("form is submitted===>", values)}
+            >
+                <Form>
 
-        <Formik
-            initialValues={{
-                username: "",
-                password: "",
-                country: ""
-            }}
-            onSubmit={(values) => {
-                console.log("values====>", values)
-            }}
-        >
+                    {formFields.map((value, index) => {
+                        return (
+                            <div>
+                                <label >{value.fieldLabel}</label>
+                                <Field
+                                    type={value.fieldType !== "textarea" && value.fieldType}
+                                    as={value.fieldType === "textarea" && value.fieldType}
+                                    name={value.fieldName}
 
-            <Form>
-                <div>
-                    <label htmlFor=""> Username </label>
-                    <FastField type="text" name="username" />
-                </div>
+                                />
+                            </div>
 
-                <div>
-                    <label htmlFor=""> Password </label>
-                    <FastField type="text" name="password" />
-                </div>
+                        )
 
-                <div>
-                    <label htmlFor=""> Country </label>
-                    <FastField as="select" name="country">
-                        <option value="IN"> India </option>
-                        <option value="Pk"> Paksithan </option>
-                        <option value="CN"> China </option>
-                    </FastField>
-                </div>
+                    })}
+                </Form>
+            </Formik>
 
-                <div>
-                    <FastField type="submit" name="register" value="Register" />
-                </div>
-
-
-            </Form>
-
-
-        </Formik>
-
-
-
-
-
-
-    </div>
+        </>
+    )
 
 }

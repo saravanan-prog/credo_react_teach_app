@@ -1,114 +1,49 @@
-import { ErrorMessage, Field, Form, Formik, FastField } from "formik";
-import * as Yup from 'yup'
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import formField from './form-field.json'
+import { initialValues,validationSchema } from "./formAction";
 
 
-const initialValues = {
-    username: "",
-    password: "",
-    confirmPassword :"",
-    country: ""
-}
-
-
-
-const validationSchema = Yup.object({
-    username: Yup.string()
-        .required("User name field is required")
-        .email("username is must be email format")
-        ,
-
-    password : Yup.string()
-               .required("Password field is required") 
-                .matches(
-                     /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/,
-                    "Must contain 1 uppercase, 1 number, 1 special character"
-                )
-                .max(6,"Password maximum 6 char only")
-               
-               ,  
-
-    
-    country : Yup.string()
-                .required("Country is required"),
-
-    
-    confirmPassword: Yup.string()
-        .required("Required")
-        .oneOf([Yup.ref("password")], "Passwords must match")
-        
-            
-
-    
-})
 
 
 export default function BasicFormikYup() {
+    return (
+        <>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={
+                    (values, { resetForm }) => {
+                        console.log("values====>", values);
+                        resetForm();
+                    }
+                }
+            >
+                <Form>
 
+                    {
+                        formField.map((value, index) => {
+                            return (
+                                <div key={index}>
+                                    <label htmlFor={value.fieldId}> {value.fieldLabel} </label>
+                                    <Field
+                                        type={value.fieldType}
+                                        id={value.fieldId}
+                                        class={value.fieldClass}
+                                        name={value.fieldName}
+                                    />
+                                    <ErrorMessage
+                                        name={value.fieldName}
+                                        component="div"
+                                        className="text-danger"
+                                        style ={{color:"red"}}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
 
-
-
-    return <div>
-        <h3> Formik - Example </h3>
-
-        <Formik
-            initialValues={initialValues}
-
-            validationSchema={
-                validationSchema
-
-            }
-
-
-            onSubmit={(values,{ resetForm }) => {
-                console.log("values====>", values)
-                resetForm()
-            }}
-        >
-
-            <Form>
-                <div>
-                    <label htmlFor=""> Username </label>
-                    <FastField type="text" name="username" />
-                    <ErrorMessage name="username" component="div" className="text-danger"/>
-                </div>
-
-                <div>
-                    <label htmlFor=""> Password </label>
-                    <FastField type="text" name="password" />
-                    <ErrorMessage name="password" component="div" className="text-danger" />
-                </div>
-                <div>
-                    <label htmlFor=""> Confirm password </label>
-                    <FastField type="text" name="confirmPassword" />
-                    <ErrorMessage name="confirmPassword" component="div" className="text-danger" />
-                </div>
-
-                <div>
-                    <label htmlFor=""> Country </label>
-                    <FastField as="select" name="country">
-                        <option value="IN"> India </option>
-                        <option value="Pk"> Paksithan </option>
-                        <option value="CN"> China </option>
-                    </FastField>
-
-                     <ErrorMessage name="country" component="div" className="text-danger"/>
-                </div>
-
-                <div>
-                    <FastField type="submit" name="register" value="Register" />
-                </div>
-
-
-            </Form>
-
-
-        </Formik>
-
-
-
-
-
-
-    </div>
-
+                </Form>
+            </Formik>
+        </>
+    );
 }
