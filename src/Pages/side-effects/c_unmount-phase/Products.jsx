@@ -1,18 +1,17 @@
 import { useState } from "react";
-import B_Child from "./B_Child";
+import B_Child from "./ProductList";
 
-export default function A_parent(){
+export default function Products(){
 
     const [childShow,setChildShow] = useState(true)
 
     return <div>
-        <p> I am Parent page </p>
-
+        <p> Products </p>
 
         <div>
             {childShow && <B_Child /> }
 
-            <button onClick={()=>setChildShow(false)}> Hide the component </button>
+            <button onClick={()=>setChildShow(false)}> disable products </button>
         </div>
 
 
