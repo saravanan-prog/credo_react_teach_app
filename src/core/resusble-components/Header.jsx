@@ -6,12 +6,18 @@ export default function Header() {
   
 
 
-    return <div className ="bg-primary">
+    return (
+        <>
+            <div >
       
-        <p> <Link to = {"/home"}   className="text-white"> Home </Link></p>
-        <p> <Link to = {"/about"}  className="text-white"> About </Link></p>
-        <p> <Link to = {"/blogs"}  className="text-white"> Blog </Link></p>
-        <p> <Link to = {"/contact"}  className="text-white"> Contact </Link></p>
+                <p> <Link to = {"/home"}  > Home </Link></p>
+                <p> <Link to = {"/about"} > About </Link></p>
+                <p> <Link to = {"/blog"}  > Blog </Link></p>
+                <p> <Link to = {"/contact"}  > Contact </Link></p>
         
-    </div>
+            </div>
+        
+        
+        </>
+    )
 }

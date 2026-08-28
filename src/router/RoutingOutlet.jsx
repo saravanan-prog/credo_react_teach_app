@@ -1,30 +1,31 @@
-import { BrowserRouter,Routes,Route} from "react-router"
-import HomePage from '../Pages/home/Homepage'
-import AboutPage from '../Pages/about/Aboutpage'
-import BlogPage from '../Pages/blog/BlogPage'
-import ContactPage from "../Pages/contact/ContactPage"
-import DashboardPage from "../Pages/dashboard/DashboardPage"
-import PageNotFound from "../Pages/pagenotFound/PageNotFound"
-import Header from "../core/resusble-components/Header"
-import LoginForm from "../Pages/Login/LoginForm"
+import { BrowserRouter, Routes, Route } from "react-router";
+import Header from "../core/resusble-components/Header";
+import Homepage from "../Pages/home/Homepage";
+import Aboutpage from "../Pages/about/Aboutpage";
+import BlogPage from "../Pages/blog/BlogPage";
+import ContactPage from "../Pages/contact/ContactPage";
+import PageNotFound from "../Pages/pagenotFound/PageNotFound";
+import Products from "../Pages/products/Products";
 
-export default function RoutingOutlet(){
+export default function RoutingOutlet() {
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
 
-
-    return <div>
-        <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route index element = {<HomePage />} />
-                <Route path="home" element= { <HomePage /> } />
-                <Route path="about" element= { <AboutPage /> } />
-                <Route path="blogs" element= { <BlogPage /> }  />
-                <Route path="contact" element= { <ContactPage /> } />  
-                <Route path ="login" element = {<LoginForm />} />
-                <Route path ="dashboard" element = {<DashboardPage />} />
-                <Route path="*" element={<PageNotFound />} />
-            </Routes>
-            
-        </BrowserRouter>
-    </div>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="home" element={<Homepage />} />
+          <Route path="about" element={<Aboutpage />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<Products />} />
+          <Route path="products/:name" element={<Products />} />
+          <Route path="products/:id /:name" element={<Products />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
