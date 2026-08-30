@@ -30,12 +30,12 @@ export default function Aparent(){
         <>
           <div className="title"><h1> React Props </h1></div>
 
-           <Bchild 
-                name  = {canidateName}
-                email = {candidateEmail}
-                phone = {candidatePhone }
-                address = { candidateAddress}
-           />
+            <Bchild 
+                canidateName     = {canidateName}
+                candidateEmail   = {candidateEmail}
+                candidatePhone   = {candidatePhone}
+                candidateAddress = {candidateAddress}
+            />
         
         </>
     )

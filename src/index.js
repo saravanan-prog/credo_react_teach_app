@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import PortfolioMainpage from "./pages/d_props_drilling/PortfolioMainpage";
+
+import Aparent from "./pages/a_props-understand/Aparent";
 
 
 
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
 
-  <PortfolioMainpage/>
+  <Aparent/>
     
   </React.StrictMode>,
 );
