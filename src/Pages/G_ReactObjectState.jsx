@@ -10,6 +10,14 @@ export default function G_ReactObjectState(){
         }
     )
 
+    const modifynameField = () => {
+        setEmployee( { ...employee, empname : "Nagaraj" } )
+    }
+
+    const modifyDesigination = () => {
+        setEmployee( { ...employee, empdesignation:"Tester"} )
+    }
+
 
     
 
@@ -22,8 +30,16 @@ export default function G_ReactObjectState(){
           </div>
 
           <div>
-                <button onClick={ () => setEmployee({...employee,empname:"vinoth"})} > Change Name </button>
-                <button  onClick={ () => setEmployee({...employee,empdesignation:"tester"})} > Change Desigination</button>
+                <button  
+                    onClick={ modifynameField } 
+                > 
+                    Modify your name
+                </button>
+                <button  
+                    onClick={ modifyDesigination } 
+                > 
+                    Modify your Desigination
+                </button>
           </div>
         </>
     )

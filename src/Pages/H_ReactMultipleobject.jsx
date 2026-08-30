@@ -22,17 +22,32 @@ export default function H_ReactMultipleobject(){
         ]
     )
 
+    const addEmployee = () => {
+
+        let record = {
+            empid: 4,
+            empname:"vimal",
+            empdesignation: "Trainee"
+        }
+        setEmployees([...employees,record])
+
+    }
+
     return (
         <>
           <div> <h2> Employee Detail </h2></div>
           <div>
             {employees.map((value,index)=>{
                 return <>
-                    <p> Employee Name : {value.empid} </p>
+                    <p>  id  : {index + 1} </p>
+                    <p> Employee Name : {value.empname} </p>
                     <p> Employee Desigination : {value.empdesignation} </p>
+                    <hr/>
                 </>
             })}
+            <button onClick = {addEmployee}> Add Employee </button>
           </div>
+
         </>
     )
 }
