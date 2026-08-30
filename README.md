@@ -1,42 +1,47 @@
-import React, { Component } from "react";
+## Components
+   it is a piece of UI code.
 
-class Users extends Component {
+## Types
+  - function Component
+  - class  Component.
 
-  controller = new AbortController();
+### Function Component
 
-  componentDidMount() {
-
-    fetch("https://api.example.com/users", {
-      signal: this.controller.signal
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log("Users:", data);
-      })
-      .catch(error => {
-
-        if (error.name === "AbortError") {
-          console.log("API request cancelled");
-        } else {
-          console.log("API failed:", error);
-        }
-
-      });
-  }
-
-  componentWillUnmount() {
-
-    this.controller.abort();
-
-  }
-
-  render() {
+```
+  function  Compname(){
     return (
-      <div>
-        <h1>Users</h1>
-      </div>
-    );
+        // jsx code
+    )
+  }
+
+```
+### Class Component
+
+```
+class Homepage extends React.Component {
+  constructor(){
+
+  }
+  render(){
+    return(
+       // JSX code
+    )
   }
 }
+```
 
-export default Users;
+### LIFE CYCLE
+
+Mounting  Phase
+```
+  constructor
+  render
+  componentDidMount
+```
+ Updating  Phase
+```
+  setState
+  componentDidUpdate
+  render
+```
+ Unmounting Phase

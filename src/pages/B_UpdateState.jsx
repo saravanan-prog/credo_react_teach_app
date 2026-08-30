@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class A_BasicUnderstandclass extends Component {
+export default class B_UpdateState extends Component {
     
     constructor(){
         super()
@@ -10,7 +10,20 @@ export default class A_BasicUnderstandclass extends Component {
            candidateAge : 28,
            candidateEmail : "saravanan@gmail.com"
         }
+        this.handleUpdate = this.handleUpdate.bind(this)
     }
+
+    handleUpdate(){
+    
+        this.setState(
+            {
+                canidateName : "nagaraj",
+                candidateAge : 29,
+                candidateEmail : "nagaraj@gmail.com"
+            }
+        )
+    }
+    
 
     render(){
 
@@ -23,6 +36,9 @@ export default class A_BasicUnderstandclass extends Component {
                     <p>Canididate  Name : {this.state.canidateName}</p>
                     <p>Canididate Age:   {this.state.candidateAge} </p>
                     <p>Canididate Email: {this.state.candidateEmail} </p>
+                </div>
+                <div>
+                    <button onClick={this.handleUpdate}>Bulk update</button>
                 </div>
             
             </>

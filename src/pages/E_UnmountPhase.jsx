@@ -1,6 +1,6 @@
 import { Component } from "react"
 
-export default class D_UnmountPhase extends Component {
+export default class E_UnmountPhase extends Component {
 
     constructor(){
         super()
@@ -8,13 +8,11 @@ export default class D_UnmountPhase extends Component {
         this.controller = new AbortController()
 
         this.state = {
-           "email": "john@gmail.com",
-            "username": "johnd",
-            "password": "m38rmF$",
             "name": {
                 "firstname": "john",
                 "lastname": "doe"
             },
+            "email": "john@gmail.com",
             "phone": "1-570-236-7033",
         }
     }

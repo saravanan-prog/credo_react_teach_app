@@ -1,6 +1,6 @@
 import { Component } from "react"
 
-export default class C_UpdatingPhase extends Component {
+export default class D_UpdatingPhase extends Component {
 
     constructor(){
         super()
@@ -20,7 +20,7 @@ export default class C_UpdatingPhase extends Component {
                     <h4> qty : {this.state.qty} </h4>
                     <h4> Price : {this.state.price} </h4>
                     <h4> total : {this.state.total} </h4>
-                    <button onClick = {()=> this.setState({qty: this.state.qty + 1 })} > Add count </button>
+                    <button onClick = { ()=> this.setState({ qty: this.state.qty + 1 })} > Add Qty </button>
                 </div>
 
             </>
@@ -28,6 +28,7 @@ export default class C_UpdatingPhase extends Component {
     }
 
     componentDidUpdate(prevProps,prevState){
+        
        if(prevState.qty != this.state.qty){
             this.setState( {total: this.state.qty * this.state.price} )
        }
