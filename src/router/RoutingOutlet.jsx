@@ -6,6 +6,9 @@ import BlogPage from "../Pages/blog/BlogPage";
 import ContactPage from "../Pages/contact/ContactPage";
 import PageNotFound from "../Pages/pagenotFound/PageNotFound";
 import Products from "../Pages/products/Products";
+import ViewDetails from "../Pages/products/ViewDetails";
+import CustomerList from "../Pages/customers/CustomersList";
+import Viewcustomerdetails from "../Pages/customers/Viewcustomerdetails";
 
 export default function RoutingOutlet() {
   return (
@@ -20,9 +23,13 @@ export default function RoutingOutlet() {
           <Route path="blog" element={<BlogPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="products" element={<Products />} />
-          <Route path="products/:id" element={<Products />} />
-          <Route path="products/:name" element={<Products />} />
-          <Route path="products/:id /:name" element={<Products />} />
+          <Route path="customers" element={<CustomerList />} />
+           <Route path="customers/viewcustomer" element={<Viewcustomerdetails />} />
+
+
+          <Route path="products/viewdetails/:id" element={<ViewDetails />} />
+          <Route path="products/viewdetails/:name" element={<ViewDetails />} />
+          <Route path="products/viewdetails/:id /:name" element={<ViewDetails />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

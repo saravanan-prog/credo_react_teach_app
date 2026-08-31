@@ -1,9 +1,9 @@
 import { useState,useEffect } from "react"
-import { useParams } from "react-router"
+import { Link, useParams } from "react-router"
 
 
 export default function Products(){
-    const [product,setProducts] =useState()
+    const [product,setProducts] =useState([])
 
     const {id,name} = useParams()
 
@@ -25,10 +25,23 @@ export default function Products(){
 
     return (
         <>
-            <div>
-                <h4> Products </h4>
-                 {JSON.stringify(product)}
-         
+            <div> <h4> Products </h4></div>
+            <div className="d-flex gap-5 flex-wrap p-3">
+                {product.map((value,index) => {
+                    return (
+                        <div className="card" style={{width:"300px"}}>
+                            <div className="card-header">
+                                 <img src = {value.image} height={100} width={100}/>
+                            </div>
+                            <div className="card-body">
+                                 <p>{value.title}</p>
+                            </div>
+                            <div className="card-footer">
+                                 <Link to = {`../products/viewdetails/${value.id}`}>View more Info</Link>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         
         
