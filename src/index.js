@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import UserList from "./Pages/customers/UsersList";
-import LoginPage from "./Pages/login/LoginPage";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
 
@@ -10,6 +10,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-     <LoginPage />
+     <UserList />
   </React.StrictMode>
 );
