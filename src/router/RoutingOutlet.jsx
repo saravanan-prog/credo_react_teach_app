@@ -18,12 +18,15 @@ export default function RoutingOutlet(){
             <Header />
             <Routes>
                 <Route index element = {<LoginForm />} />
+
                 <Route path ="login" element = {<LoginForm />} />
 
                 <Route path="dashboard" element= { 
+
                     <ProtectionRoute>
-                         <DashboardPage /> 
+                        <DashboardPage  /> 
                     </ProtectionRoute>
+
                     }  
                 />
 

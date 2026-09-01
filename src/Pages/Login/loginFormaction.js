@@ -23,7 +23,6 @@ export const formSubmit = async (values,navigate) => {
 
 
     let payload = {
-
         "username" : values.username.trim(),
         "password" : values.password.trim()
     }
@@ -44,7 +43,7 @@ export const formSubmit = async (values,navigate) => {
         let responseData = await response.json()
         localStorage.setItem("token",responseData?.token)
         //navigation-code 
-         navigate('/dashboard')
+        navigate('/dashboard')
         
     }
     catch(error){
