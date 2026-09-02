@@ -1,0 +1,30 @@
+{
+    "customers": [
+        {
+            "name": "saravanan",
+            "email": "saravanan@gmail.com"
+        },
+        {
+            "name": "Rajesh",
+            "email": "rajesh@gmail.com"
+        },
+        {
+            "name": "vimal",
+            "email": "vimal@gmail.com"
+        }
+    ],
+    "Products": [
+        {
+            "name": "apple",
+            "price": 20
+        },
+        {
+            "name": "orange",
+            "price": 50
+        },
+        {
+            "name": "pineapple",
+            "price": 100
+        }
+    ]
+}
