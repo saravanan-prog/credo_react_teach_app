@@ -6,11 +6,26 @@ import MainRoute from './router/MainRoute'
 import { MainContext } from "./core/context/contextStore";
 
 
+function MainPage(){
 
-const basicPageSetup = {
-    language:"english",
-    mode:"light"
+  const basicPageSetup = {
+      language :"tl",
+      mode : "dark"
+  }
+
+
+
+  return(
+    <>
+      <div>
+        <MainContext.Provider value={{"basicSetup":basicPageSetup}}>
+           <MainRoute />
+        </MainContext.Provider>
+      </div>
+    </>
+  )
 }
+
 
 
 
@@ -18,14 +33,7 @@ const basicPageSetup = {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode >
-    <MainContext.Provider value = {
-      { 
-        "basicPageSetup":basicPageSetup
-      }
-    }>
-        <MainRoute />
-    </MainContext.Provider>
-    
-  </React.StrictMode>
+  <div >
+    <MainPage />
+  </div>
 );

@@ -1,5 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
+
 import ComponentA from './components/ComponentA'
+
 import tamilContent from '../../core/lang/tamil.json'
 import englishContent from '../../core/lang/en.json'
 
@@ -10,27 +12,26 @@ export default function HomePage(){
     
     const[pageContent,setPageContent] = useState(null)
 
-    const mainData = useContext(MainContext)
-    const { language,mode } = mainData.basicPageSetup
-    
-    useEffect(()=>{
+    const { basicSetup } = useContext(MainContext)
+    const {language} = basicSetup
+  
 
-        if( language == "tamil")
-            setPageContent(tamilContent)
+
+    useLayoutEffect(()=>{
+        if(language === 'en')
+           setPageContent(englishContent)
         else
-            setPageContent(englishContent)
-
+          setPageContent(tamilContent)
     },[])
     
 
 
-    return <div style = {mode == 'dark' ? {backgroundColor:"black",color:"white"} :{backgroundColor:"white",color:"black"} }>
+    return <div  >
+       
         <h1> {pageContent?.homeLabel_lg } </h1>
+         <p> {pageContent?.Hello} </p>
 
-
-        <div>
-            <ComponentA />  
-        </div>
+        
 
         
 
