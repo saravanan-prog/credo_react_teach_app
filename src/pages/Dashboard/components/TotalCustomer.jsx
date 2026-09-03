@@ -1,16 +1,20 @@
-import { useContext } from "react"
-import { DashboardContext } from "../../../context/generalContext"
+import { useContext, useEffect } from "react"
+import { DashboardContext } from "../../../context/globalStore"
 import CustomerList from "./CustomerList"
 
 export default function TotalCustomer(){
+    
+    const {data} = useContext(DashboardContext)
+    const {customers} = data
 
-    const dashboardState = useContext(DashboardContext)
-    const {customers,develpedBy} = dashboardState.dashboard
+    useEffect(()=>{
+            console.log("customers=====>",customers)
+    },[])
 
     return(
         <>
             <div>
-                <h3> Total Customer ({customers.length}) - {dashboardState.develpedBy} </h3>
+                <h3> Total Customer - ( {customers.length} )  </h3>
                  <CustomerList />
                 
             </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import DisplayCount from "./components/DisplayCount";
-import { counterContext } from "../../context/generalContext";
+import { counterContext } from "../../context/globalStore";
 
 export default  function CounterPage(){
 
@@ -16,10 +16,10 @@ export default  function CounterPage(){
             <div><h3> Simple Calculator </h3></div>
             <div>
             <counterContext.Provider value = {
-                {
-                    count:count,
-                    addition : addition
-                }
+                    {
+                        count:count,
+                        addition : addition
+                    }
                 }
                 
                 >

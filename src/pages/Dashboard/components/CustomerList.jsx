@@ -1,10 +1,12 @@
 import { useContext } from "react"
-import { DashboardContext } from "../../../context/generalContext"
+import { DashboardContext } from "../../../context/globalStore"
+import TotalProducts from "./TotalProducts"
 
 export default function CustomerList(){
 
-    const dashboardState = useContext(DashboardContext)
-    const {customers} = dashboardState.dashboard
+    const {data} = useContext(DashboardContext)
+    const {customers} = data
+   
 
     return(
         <>
@@ -22,7 +24,7 @@ export default function CustomerList(){
                 )}
             </div>
             
-        
+            <TotalProducts />
         
         
         </>

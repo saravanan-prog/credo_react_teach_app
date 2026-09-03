@@ -10,7 +10,7 @@ export default  function Buttons(){
         <>
             
             <div>
-                <button onClick={() => addition(100)}> Add </button>
+                <button onClick={() => addition(100)}> Add + 100 </button>
             </div>
         
         

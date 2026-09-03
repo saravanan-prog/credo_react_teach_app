@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import { DashboardContext } from "../../../context/generalContext"
+import { DashboardContext } from "../../../context/globalStore"
 
 
 export default function TotalProducts(){
 
-    const dashboardData = useContext(DashboardContext)
-    const {Products} = dashboardData.dashboard
+    const { data } = useContext(DashboardContext)
+    const { Products } = data
 
     return(
         <>

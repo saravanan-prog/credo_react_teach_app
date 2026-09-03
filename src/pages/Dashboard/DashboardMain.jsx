@@ -2,12 +2,13 @@ import TotalCustomer from "./components/TotalCustomer";
 import TotalProducts from "./components/TotalProducts";
 import DashboardResponse from '../../json/dashboardResponse.json'
 import { useState } from "react";
-import { DashboardContext } from "../../context/generalContext";
+
+import { DashboardContext } from "../../context/globalStore";
 
 export default function DashboardMain(){
 
     const [dashboardData,setDashboardData] = useState(DashboardResponse)
-    const [develpedBy,setDevloperby] = useState("Power India corporation")
+    
 
 
     return(
@@ -17,22 +18,11 @@ export default function DashboardMain(){
             </div>
 
             <div>
-                <DashboardContext.Provider  value = {
-                     {
-                        'dashboard' : dashboardData,
-                        "develpedBy" : develpedBy
-                     } 
-                }
-                     
-                >
-                    <TotalProducts />
+                <DashboardContext.Provider value={{ "data" : dashboardData }}>
                     <TotalCustomer />
                 </DashboardContext.Provider>
-               
+        
             </div>
-        
-        
-        
         </>
     )
 }
