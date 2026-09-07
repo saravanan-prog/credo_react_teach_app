@@ -4,5 +4,6 @@
     "loading_lg" :"Loading...",
     "name_lg" :"Name",
     "email_lg" :"Email",
-     "demoPage_lg" : "Demo Page"
+    "demoPage_lg" : "Demo Page",
+    "otp": "OTP"
 }

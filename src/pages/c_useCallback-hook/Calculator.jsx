@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react"
 
-export default function Calculator(){
+export default function ExampleuseCallback(){
 
     
     const [count,setCount] = useState(0)

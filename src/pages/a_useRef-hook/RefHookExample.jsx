@@ -1,18 +1,32 @@
 
-import { useEffect } from "react"
+import { useEffect, useLayoutEffect, useRef } from "react"
 
 export default function RefHookExample(){
     
-    
+    const pref = useRef()
+    const usernameRef = useRef()
 
-   
-    
-   
-    return <div>
+    useLayoutEffect(()=>{
+        pref.current.style.backgroundColor = "brown";
+        pref.current.style.color = "white";
+        usernameRef.current.focus()
+    },[])
 
-        <h1> UseRef Hook Example </h1>
-        <p> Hello Saravanan </p>
-        <input type="text"  />
-  
-    </div>
+
+    return (
+        <>
+            <div>
+                <h3> Use Ref Hook Example </h3>
+            </div>
+
+            <div>
+                <p ref={pref}> Hello React JS world </p>
+            </div>
+            <div>
+                <input type="text" name="username" ref={usernameRef} />
+                <button> Print</button>
+            </div>
+        
+        </>
+    )
 }
