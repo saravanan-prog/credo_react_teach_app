@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./Store";
+import CounterMainPage from "./couter/CounterMainPage";
+import ScientificCalculator from "./scientific-calculator/ScientificCalculator";
 
 
 
@@ -7,7 +11,10 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-     
-  </React.StrictMode>
+  <div>
+     <Provider store={store}>
+        <CounterMainPage />
+        <ScientificCalculator />
+     </Provider>
+  </div>
 );
