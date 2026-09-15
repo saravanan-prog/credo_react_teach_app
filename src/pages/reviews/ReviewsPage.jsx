@@ -6,8 +6,10 @@ import { useRef } from "react"
 export default function ReviewsPage(){
 
     const allComments = useSelector( state => state.reviewpageReducer.comments)
+     const dispatch = useDispatch()
+     
     const commentRef = useRef()
-    const dispatch = useDispatch()
+   
 
     return <div>
         <h3> Reviews Page </h3>

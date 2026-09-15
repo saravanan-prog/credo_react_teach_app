@@ -5,8 +5,8 @@ export const counterSlice =  createSlice({
     name:"counter-app",
     
     initialState : {
-        count : 0,
-        applicationName :"calculator app"
+        appTitle : "Counter App",
+        count : 0
     },
     reducers :{
         addition : (state,action) => {
@@ -16,7 +16,7 @@ export const counterSlice =  createSlice({
             state.count -= 1
         },
         multiplication : (state,action) => {
-            state.count *= 2
+            state.count *= action.payload.multiplyval
         }
     }
 })

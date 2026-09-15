@@ -5,20 +5,21 @@ import { Link } from "react-router"
 
 export default function CounterPage(){
 
-   useSelector((state) => console.log("State=========>",state))
+   const applicationTitle  =  useSelector((state) => state?.counterReducer?.appTitle)
+   const count             =  useSelector((state) => state?.counterReducer?.count)
 
-   const count    =  useSelector((state) => state?.counterReducer?.count)
+
    const dispatch = useDispatch()
 
 
     return <div>
-         <h2> Counter Page </h2>
+         <h2> {applicationTitle} </h2>
          
          <p> count : {count}</p>
 
-         <button onClick={()=>dispatch(addition())}> Add </button>
-         <button onClick={()=>dispatch(subracton())}> Sub </button>
-         <button onClick={()=>dispatch(multiplication())}> Mul </button>
+         <button onClick={ () => dispatch(addition())}> Add </button>
+         <button onClick={() =>  dispatch(subracton())}> Sub </button>
+         <button onClick={() =>  dispatch(multiplication({"multiplyval":5}))}> Mul </button>
          
 
          <div>
