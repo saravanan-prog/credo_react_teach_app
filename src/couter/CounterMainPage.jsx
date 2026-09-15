@@ -1,5 +1,5 @@
 import { useSelector,useDispatch } from "react-redux"
-import { add,sub } from "./counter.slice"
+import { add,sub,addBypaylod } from "./counter.slice"
 
 export default function CounterMainPage(){
 
@@ -16,6 +16,14 @@ export default function CounterMainPage(){
             </div>
             <div>
                <button onClick = {()=>dispatch(add())}>ADD</button>
+               <button onClick = {()=>dispatch(
+                    addBypaylod( 
+                        {
+                            "input":100,
+                            "name":"sudharshan"
+                        })
+                    )}> Add by 100</button>
+
                <button onClick = {()=>dispatch(sub())}>SUB</button>
             </div>
         </>

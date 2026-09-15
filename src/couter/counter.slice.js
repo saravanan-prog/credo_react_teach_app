@@ -12,12 +12,15 @@ export const counterSlice = createSlice(
             },
             sub : (state,action) =>{
                 state.count -= 1
+            },
+            addBypaylod :(state,action) => {
+                state.count += action.payload.input
             }
         }
     }
 )
 
 // Export the all actions
-export const {add,sub} = counterSlice.actions
+export const {add,sub,addBypaylod} = counterSlice.actions
 //Export the reducer
 export default counterSlice.reducer
