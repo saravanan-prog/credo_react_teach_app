@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import studentDetails from '../../asset/json/studentInfo.json'
 
 export default function AddStudent() {
+
     const [students, setStudent] = useState(studentDetails)
 
     const addStudent = () => {

@@ -4,14 +4,15 @@ import studentDetails from '../../asset/json/studentInfo.json'
 export default function SearchStudent() {
     
     const [students, setStudents]   = useState(studentDetails)
-    const [searchByValue,setSearchByValue] = useState(null)
+    const [searchText,setSearchtext] = useState(null)
 
     const handleSearch = () => {
 
-        const searchValue = searchByValue.trim().toLowerCase();
+        const searchValue = searchText && searchText.trim().toLowerCase();
 
-        if (searchValue === "") {
-            setStudents(students);
+        if (searchValue == null) {
+           
+            setStudents(studentDetails);
             return;
         }
 
@@ -33,7 +34,7 @@ export default function SearchStudent() {
                 <center> <h1> Student Information System </h1> </center>
             </div>
             <div>
-                <input type="text" name="search" onChange ={(event)=>setSearchByValue(event.target.value)} />
+                <input type="text" name="search" onChange ={(event)=>setSearchtext(event.target.value)} />
                 <button onClick={handleSearch}>Search</button>
             </div>
             <div>
