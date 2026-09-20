@@ -13,6 +13,7 @@ export default function Exprience({ studentdetails }) {
             <div>
                 <Skills
                     studentdetails={studentdetails}
+                    
                 />
             </div>
 

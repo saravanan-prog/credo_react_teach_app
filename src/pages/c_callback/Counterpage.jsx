@@ -5,11 +5,11 @@ export default function Counterpage() {
 
   const [count, setCount] = useState(0);
 
-  const increment = (item) => setCount(count + item )
-  const decrement = (item) => count > 0 && setCount(count - item )
-  const multiply  = (item) => count > 0 && setCount(count * item )
-  const division  = (item) => count > 0 && setCount(count / item )
-  const reset     = (item) => setCount(0)
+  const increment = (item) =>  setCount(count + item )
+  const decrement = (item) =>  setCount(count - item )
+  const multiply  = (item) =>  setCount(count * item )
+  const division  = (item) =>  setCount(count / item )
+  const reset     = (item) =>  setCount(item)
  
 
 

@@ -13,6 +13,7 @@ export default function Skills({ studentdetails }) {
                 </ul>
             </div>
 
+            
         </>
     )
 }

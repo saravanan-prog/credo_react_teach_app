@@ -10,7 +10,7 @@ export default function Education({ studentdetails }) {
                 <p> He is completed {education} in {institution} academic {academicYear}  </p>
             </div>
 
-            <Exprience studentdetails={studentdetails} />
+            <Exprience studentdetails={studentdetails}  />
 
         </>
     )
