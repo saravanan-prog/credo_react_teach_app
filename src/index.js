@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import HomePage from "./pages/home/HomePage";
+import HomePage from "./pages/HomePage";
 
 
 
