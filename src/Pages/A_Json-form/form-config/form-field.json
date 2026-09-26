@@ -4,18 +4,23 @@
         "fieldType"   :  "text",
         "fieldName"   :  "username",
         "fieldId"     : "username",
-        "fieldClass"  :  "",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
         "fieldEnable" :  true,
-        "fieldDefaultValue" : ""
+        "fieldDefaultValue" : "",
+        "fieldManditory" : true,
+        "fieldPlaceholder":"Ex: Saravanan Durai"
     },
     {
         "fieldLabel"  :  "Password",
         "fieldType"   :  "text",
         "fieldName"   :  "password",
         "fieldId"     : "username",
-        "fieldClass"  :  "",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
         "fieldEnable" :  true,
-        "fieldDefaultValue" : ""
+        "fieldDefaultValue" : "",
+        "fieldPlaceholder":""
     },
 
 
@@ -27,8 +32,9 @@
         "fieldClass"  :  "",
         "fieldRow"     : 5,
         "fieldcol"    : 5,
-        "fieldEnable" :  true,
-        "fieldDefaultValue" : ""
+        "fieldEnable" :  false,
+        "fieldDefaultValue" : "",
+        "fieldPlaceholder":""
     },
 
      {
@@ -37,10 +43,12 @@
         "fieldName"   :  "permanat-address",
         "fieldId"     : "tempaddress",
         "fieldClass"  :  "",
-         "fieldRow"     : 5,
+        "fieldRow"     : 5,
         "fieldcol"    : 5,
         "fieldEnable" :  true,
-        "fieldDefaultValue" : ""
+        "fieldDefaultValue" : "",
+        "fieldPlaceholder":"",
+        "fieldPlaceholder":""
     },
     {
         "fieldLabel"  :  "Country code",
@@ -50,7 +58,8 @@
         "fieldClass"  :  "",
         "fieldOption" : ["+91","+92","+93"],
         "fieldEnable" :  true,
-        "fieldDefaultValue" : ""
+        "fieldDefaultValue" : "",
+        "fieldPlaceholder":""
     },
     {
         "fieldLabel"  :  "",
@@ -59,6 +68,7 @@
         "fieldId"     : "login",
         "fieldClass"  :  "",
         "fieldEnable" :  true,
-        "fieldDefaultValue" : "Login"
+        "fieldDefaultValue" : "Login",
+        "fieldPlaceholder":""
     }
 ]
