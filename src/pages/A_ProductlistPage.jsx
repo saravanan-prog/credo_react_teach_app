@@ -10,11 +10,11 @@ export default function A_ProductlistPage() {
       <>
       <div>
         <h3> Welcome to KPN Store </h3>
-      </div>
-       {proudcutList && proudcutList.length !=0 ? (
+      </div> 
+       {proudcutList && proudcutList.length !=0 ? (   
           proudcutList.map((value,key)=>{
             return (
-              <div>
+              <div key={key}>
                  <p>Prdouct Name : {value?.product_name} </p>
                  <p>Prdouct Name : {value?.product_price} </p>
                  <hr />
