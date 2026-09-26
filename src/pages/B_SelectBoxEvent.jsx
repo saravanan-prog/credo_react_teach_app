@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function B_SelectBoxEvent() {
 
-    const [selectFruit,setSelectFruit] = useState()
+    const [selectFruit,setSelectFruit] = useState(null)
 
     return (
         <>
@@ -15,7 +15,7 @@ export default function B_SelectBoxEvent() {
             </div>
             <div>
                 {selectFruit && (
-                    <p> You selected Fruit is : {selectFruit} </p>
+                    <p> <strong> You selected Fruit is :</strong>  {selectFruit} </p>
                 )}
             </div>
         </>

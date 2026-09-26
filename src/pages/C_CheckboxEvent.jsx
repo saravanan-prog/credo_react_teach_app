@@ -39,12 +39,14 @@ export default function C_CheckboxEvent() {
 
             <div>
                 <h2>  Menu List </h2>
-                {choosedMenu == "veg" ? (
-                    <div>
-                        <p> Chole poori</p>
-                        <p> Panner Butter Masala</p>
-                    </div>
-                )
+                {
+                    choosedMenu == "veg" ? (
+                        <div>
+                            <p> Chole poori</p>
+                            <p> Panner Butter Masala</p>
+                        </div>
+                    )
+
                     :
                     choosedMenu == "nonveg" ? (
                         <div>
@@ -52,14 +54,14 @@ export default function C_CheckboxEvent() {
                             <p> Mutton Biriyani</p>
                         </div>
                     )
-                        : (
-                            <div>
-                                <p> kadai Chicken</p>
-                                <p> Mutton Biriyani</p>
-                                <p> Chole poori</p>
-                                <p> Panner Butter Masala</p>
-                            </div>
-                        )
+                    : (
+                        <div>
+                            <p> kadai Chicken</p>
+                            <p> Mutton Biriyani</p>
+                            <p> Chole poori</p>
+                            <p> Panner Butter Masala</p>
+                        </div>
+                    )
                 }
             </div>
 

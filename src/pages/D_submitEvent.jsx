@@ -2,18 +2,27 @@ import { useState } from "react"
 
 export default function D_submitEvent() {
 
-    const [loginData,setLoginData] = useState({})
+    const [loginData,setLoginData] = useState(
+        {
+            "username" : null,
+            "password" : null
+        }
+   )
 
     const handleChange = (e) => {
-        const fieldname  =  e.target.name
-        const fieldValue =  e.target.value
+        const fieldname  =  e.target.name             // password
+        const fieldValue =  e.target.value            // Test@123
+
+        console.log("loginForm Data====>", loginData)
 
         setLoginData( 
-            {
+            { 
                 ...loginData,
-                [fieldname] : fieldValue
+                [fieldname] : fieldValue                // { username : "arolin",password:Test@123 }
             }
         )
+
+        console.log("loginForm Data====>", loginData)
     }
 
     const handleSubmit = (e) => {
@@ -51,6 +60,12 @@ export default function D_submitEvent() {
                         </div>
                     </form>
                 </div>
+            </div>
+
+            <div>
+                <h3> Form values </h3>
+                <p> Username : {loginData?.username} </p>
+                <p> password : {loginData?.password} </p>
             </div>
         </>
     )
