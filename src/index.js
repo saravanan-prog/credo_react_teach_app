@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import C_CheckboxEvent from './pages/C_CheckboxEvent';
+import A_FullPageControl from './pages/A_FullPageControl';
+import B_TernaryOperator from './pages/B_TernaryOperator';
+import C_SimpleifBlock from './pages/C_SimpleifBlock';
 
 
 
@@ -9,7 +11,7 @@ import C_CheckboxEvent from './pages/C_CheckboxEvent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <C_CheckboxEvent/>
+    <C_SimpleifBlock/>
   </React.StrictMode>
 );
 
