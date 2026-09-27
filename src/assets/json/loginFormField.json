@@ -1,0 +1,46 @@
+[
+    {   
+        "fieldLabel" : "Username",
+        "fieldManidtory" : true,
+        "fieldType" : "text",
+        "fieldID"   : "username",
+        "fieldName" : "username",
+        "fieldclass": "form-control",
+        "fieldPlaceholder" : "Ex:xyz@gm.com",
+        "fieldStatus" : true,
+        "fieldCheckboxLabel" : null
+    },
+    {   
+        "fieldLabel" : "Password",
+        "fieldManidtory" : true,
+        "fieldType" : "password",
+        "fieldID"   : "password",
+        "fieldName" : "password",
+        "fieldclass": "form-control",
+        "fieldPlaceholder" : "Ex:Test@123",
+        "fieldStatus" : true,
+        "fieldCheckboxLabel" : null
+    },
+    {   
+        "fieldLabel" : "",
+        "fieldManidtory" : false,
+        "fieldType" : "checkbox",
+        "fieldID"   : "terms",
+        "fieldName" : "terms",
+        "fieldclass": "form-control",
+        "fieldPlaceholder" : "",
+        "fieldStatus" : true,
+        "fieldCheckboxLabel" : "Accept Terms and Condtions"
+    },
+    {   
+        "fieldLabel" : "",
+        "fieldManidtory" : false,
+        "fieldType" : "submit",
+        "fieldID"   : "submit",
+        "fieldName" : "submit",
+        "fieldclass": "form-control",
+        "fieldPlaceholder" : "",
+        "fieldStatus" : true,
+        "fieldCheckboxLabel" : null
+    }
+]

@@ -1,0 +1,62 @@
+[
+     {
+        "fieldLabel"  :  "Candidate Name",
+        "fieldType"   :  "text",
+        "fieldName"   :  "canidatename",
+        "fieldId"     : "canidatename",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "",
+        "fieldManditory" : true,
+        "fieldPlaceholder":"Ex: Saravanan Durai"
+    },
+    {
+        "fieldLabel"  :  "Candidate Email",
+        "fieldType"   :  "text",
+        "fieldName"   :  "canidateEmail",
+        "fieldId"     : "canidateEmail",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "",
+        "fieldManditory" : true,
+        "fieldPlaceholder":"Ex: Saravanan Durai"
+    },
+    {
+        "fieldLabel"  :  "Candidate Password",
+        "fieldType"   :  "text",
+        "fieldName"   :  "candidtePassword",
+        "fieldId"     : "candidtePassword",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "",
+        "fieldManditory" : true,
+        "fieldPlaceholder":"Ex: Saravanan Durai"
+    },
+     {
+        "fieldLabel"  :  "Confirm Password",
+        "fieldType"   :  "text",
+        "fieldName"   :  "confirmPassword",
+        "fieldId"     : "confirmPassword",
+        "fieldLabelclass" : "form-label",
+        "fieldClass"  :  "form-control",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "",
+        "fieldManditory" : true,
+        "fieldPlaceholder":"Ex: Saravanan Durai"
+    },
+    {
+        "fieldLabel"  :  null,
+        "fieldType"   :  "submit",
+        "fieldName"   :  "Register",
+        "fieldId"     : null,
+        "fieldLabelclass" : null,
+        "fieldClass"  :  "form-control",
+        "fieldEnable" :  true,
+        "fieldDefaultValue" : "Register",
+        "fieldManditory" : true,
+        "fieldPlaceholder":null
+    }
+]

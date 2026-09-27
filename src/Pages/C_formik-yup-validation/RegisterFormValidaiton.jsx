@@ -1,11 +1,11 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import formField from './form-field.json'
+import formField from '../../assets/json/simpleRegisterField.json'
 import { initialValues,validationSchema } from "./formAction";
 
 
 
 
-export default function BasicFormikYup() {
+export default function RegisterFormValidaiton() {
     return (
         <>
             <Formik

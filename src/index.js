@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-
-import BasicFormikYup from './Pages/D_formik-yup-validation/BasicFormikYup';
-import JsonLoginForm from './Pages/A_Json-form/JsonLoginForm';
+import RegisterFormValidaiton from './Pages/C_formik-yup-validation/RegisterFormValidaiton';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <JsonLoginForm />
+    <RegisterFormValidaiton />
   </React.StrictMode>
 );
 

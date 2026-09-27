@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import formFields from "./form-config/form-field.json";
+import formFields from "../../assets/json/registrationFormField.json";
 
 export default function JsonLoginForm() {
 
@@ -56,7 +56,7 @@ export default function JsonLoginForm() {
                     )}
 
 
-                    { ( value?.fieldType =="textarea" ) && (value?.fieldEnable) &&  (
+                    {( value?.fieldType =="textarea" ) && (value?.fieldEnable) &&  (
                       <textarea
                         name={value?.fieldName}
                         rows={value.fieldRow}                    // address, comments
