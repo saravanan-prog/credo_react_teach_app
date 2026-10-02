@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       <div>
-        <h1 class={styles.title}> About Page </h1>
+        <h1 className={`${styles.title} ${styles.fst32}`}> About Page </h1>
 
         <p id ={styles.content}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde beatae

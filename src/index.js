@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Homepage from "./Pages/a_normal-css/Homepage";
 import AboutPage from "./Pages/b_module-css/Aboutpage";
 import ContactPage from "./Pages/c_inline-css/ContactPage";
-import BootstrapStart from "./Pages/d_Bootstrap/BootstrapStart";
+import BootstrapApp from "./Pages/d_Bootstrap/BootstrapApp";
 
 
 
@@ -15,6 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <BootstrapStart />
+    <BootstrapApp />
   </React.StrictMode>
 );
