@@ -1,17 +1,21 @@
-import { useState } from "react";
-import B_Child from "./ProductList";
+import { useState,useEffect } from "react";
+import ProductList from "./ProductList";
 
 export default function Products(){
 
-    const [childShow,setChildShow] = useState(true)
+    const [showproductlist,setShowproductList] = useState(true)
+
+    useEffect(()=>{
+        console.log("compoent entered")
+    },[])
 
     return <div>
         <p> Products </p>
 
         <div>
-            {childShow && <B_Child /> }
+            {showproductlist && <ProductList /> }
 
-            <button onClick={()=>setChildShow(false)}> disable products </button>
+            <button onClick={()=>setShowproductList(false)}> disable products </button>
         </div>
 
 
