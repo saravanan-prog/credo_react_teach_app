@@ -22,14 +22,14 @@ export const formSubmit = async (values,navigate) => {
 
 
 
-    let payload = {
+    const payload = {
 
         "username" : values.username.trim(),
         "password" : values.password.trim()
     }
 
 
-    let options = {
+    const options = {
         method : "POST",
         headers: {
             "Content-Type": "application/json"
