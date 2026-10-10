@@ -1,0 +1,22 @@
+[
+    {
+        "productName" : "RENO 160",
+        "productType" : "mobile",
+        "productPrice" : "65000"
+    },
+    {
+        "productName" : "Iphone 17",
+        "productType" : "mobile",
+        "productPrice" : "165000"
+    },
+    {
+        "productName" : "Mac-ultra-fold",
+        "productType" : "laptop",
+        "productPrice" : "125000"
+    },
+    {
+        "productName" : "Leneno-think-pad",
+        "productType" : "laptop",
+        "productPrice" : "45000"
+    }
+]
