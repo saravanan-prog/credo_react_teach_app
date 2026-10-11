@@ -2,13 +2,11 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { initalValue, validationSchema, formSubmit } from "./loginFormaction";
 import formFields from './form-field.json'
 import { useEffect } from "react";
-import { useLocation, useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
 import { auth } from "../../router/auth";
 
 export default function LoginForm() {
 
-    const params = useParams()
-    const location = useLocation()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -23,9 +21,6 @@ export default function LoginForm() {
                 validationSchema={validationSchema}
                 onSubmit={(values) => formSubmit(values, navigate)}
             >
-
-                
-
             {() => (
 
                     <Form>
@@ -46,7 +41,6 @@ export default function LoginForm() {
 
                 )}
             </Formik>
-
         </div>
     )
 }

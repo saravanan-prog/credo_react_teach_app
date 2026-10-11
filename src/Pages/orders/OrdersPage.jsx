@@ -15,7 +15,7 @@ export default function OrdersPage(){
     }
 
     return <div>
-        <h1> Ordders Page </h1>
+        <h1> Order Page </h1>
         <button onClick= {handleLogout}> logout </button>
     </div>
 }

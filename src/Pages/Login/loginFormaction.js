@@ -20,15 +20,13 @@ export const validationSchema = Yup.object({
 
 export const formSubmit = async (values,navigate) => {
 
-
-
-    let payload = {
+    const payload = {
         "username" : values.username.trim(),
         "password" : values.password.trim()
     }
 
 
-    let options = {
+    const options = {
         method : "POST",
         headers: {
             "Content-Type": "application/json"
@@ -40,10 +38,18 @@ export const formSubmit = async (values,navigate) => {
 
     try{
         let response =  await fetch("https://fakestoreapi.com/auth/login",options)
-        let responseData = await response.json()
-        localStorage.setItem("token",responseData?.token)
-        //navigation-code 
-        navigate('/dashboard')
+        console.log("response====>",response)
+        if(response.status == 201){
+            let responseData = await response.json()
+            localStorage.setItem("token",responseData?.token)
+            //navigation-code 
+            navigate('/dashboard')
+        }
+        else{
+            console.log("Login API ERROR")
+            navigate('/login')
+        }
+        
         
     }
     catch(error){
