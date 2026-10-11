@@ -4,14 +4,17 @@ import { useParams } from "react-router"
 
 export default function DynamicRoutePage(){
 
-    const params = useParams()
+    const {id,name} = useParams()
 
     useEffect(()=>{
-        console.log("useParams=====>",params)
+        console.log("useParams=====>",id)
     },[])
 
-    return <div>
-        <p> Dynamic Route page </p>
+    return (
+        <div>
+            <p> Admin ID  - {id} </p>
+            <p> Admin Name - {name}</p>
     
-    </div>
+        </div>
+    )
 }

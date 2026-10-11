@@ -7,6 +7,8 @@ import ContactPage from "../Pages/contact/ContactPage"
 import Products from "../Pages/products/Products"
 import PageNotFound from "../Pages/pagenotFound/PageNotFound"
 import HeaderButtonComponent from "../components/header/HeaderButtonComponent";
+import DynamicRoutePage from "../Pages/paramter-page/DynamicRoutePage";
+import LocationRoutePage from "../Pages/paramter-page/LocationRoutePage";
 
 export default function MainRoute() {
   return (
@@ -39,6 +41,25 @@ export default function MainRoute() {
               path = {"products/:id"}
               element = {<Products />}
             />
+            <Route 
+               path="admin"
+               element = {<DynamicRoutePage />}
+            
+            />
+            <Route 
+               path="admin/:id"
+               element = {<DynamicRoutePage />}
+            
+            />
+            <Route 
+              path="admin/:id/:name"
+              element = {<DynamicRoutePage />}
+            
+            />
+            <Route 
+               path="customers"
+               element = {<LocationRoutePage />}
+             />
             <Route 
               path = {"*"}
               element = {<PageNotFound />}

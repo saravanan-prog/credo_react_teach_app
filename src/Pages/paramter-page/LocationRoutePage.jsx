@@ -5,16 +5,21 @@ import { useLocation } from "react-router"
 export default function LocationRoutePage(){
 
     const location = useLocation()
-    let url = new URLSearchParams(location.search)
     
+    const queryParams = new URLSearchParams(location.search)
+    const customerId = queryParams.get("customer-Id")
+    const customerName = queryParams.get("customername")
+
 
     useEffect(()=>{
-        console.log("Id====>",url.get('id'))
-         console.log("name",url.get('name'))
+        
     },[])
 
-    return <div>
-        <p> Locaiton Route page </p>
-    
-    </div>
+    return (
+        <div>
+            <h3> Customers Page </h3>
+            <p> Customer ID : {customerId}</p>
+            <p> Customer Name : {customerName}</p>
+        </div>
+    )
 }
