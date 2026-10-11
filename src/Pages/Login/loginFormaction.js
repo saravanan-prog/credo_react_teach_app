@@ -18,7 +18,7 @@ export const validationSchema = Yup.object({
                 .required("Password is required")
 })
 
-export const formSubmit = async (values,navigate) => {
+export const formSubmit = async (values,navigate,setLoginError) => {
 
     const payload = {
         "username" : values.username.trim(),
@@ -46,7 +46,7 @@ export const formSubmit = async (values,navigate) => {
             navigate('/dashboard')
         }
         else{
-            console.log("Login API ERROR")
+           setLoginError(true)
             navigate('/login')
         }
         
