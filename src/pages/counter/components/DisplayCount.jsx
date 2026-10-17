@@ -1,18 +1,17 @@
-import { useContext } from "react"
-import { counterContext } from "../../../context/generalContext"
 import Buttons from "./Buttons"
-
+import { CounterContext } from "../../../context/globalStore"
+import { useContext } from "react"
 
 export default  function DisplayCount(){
 
-    const {count} = useContext(counterContext)
+    const { count } = useContext(CounterContext)
 
 
     return (
         <>
           
             <div>
-               <p> count : {count}</p> 
+               <p> Current Count is : {count} </p> 
                <Buttons />
             </div>
         

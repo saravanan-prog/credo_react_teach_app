@@ -1,32 +1,38 @@
-import { useContext } from "react"
-import { DashboardContext } from "../../../context/globalStore"
-import TotalProducts from "./TotalProducts"
+import { useContext } from "react";
+import { DashbordContextStore } from "../../../context/globalStore";
+import Products from "./Products";
 
-export default function CustomerList(){
+export default function CustomerList() {
+  const { customers } = useContext(DashbordContextStore);
 
-    const {data} = useContext(DashboardContext)
-    const {customers} = data
-   
-
-    return(
-        <>
-            
-            <div>
-                {customers.map(
-                    (value,index) => {
-                        return(
-                            <div>
-                                <span>{value.name}</span>
-                                 <span>{value.email}</span>
-                            </div>
-                        )
-                    }
-                )}
-            </div>
-            
-            <TotalProducts />
-        
-        
-        </>
-    )
+  return (
+    <>
+      <h5> Our Customers </h5>
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {customers && customers.length != 0 ? (
+            customers.map((value, index) => {
+              return (
+                <tr className="">
+                  <td>{value.name}</td>
+                  <td>{value.email}</td>
+                </tr>
+              );
+            })
+          ) : (
+            <h3> No Customers Found</h3>
+          )}
+        </tbody>
+      </table>
+      <div>
+        <Products />
+      </div>
+    </>
+  );
 }

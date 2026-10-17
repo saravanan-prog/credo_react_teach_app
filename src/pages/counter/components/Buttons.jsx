@@ -1,16 +1,16 @@
+import { CounterContext } from "../../../context/globalStore"
 import { useContext } from "react"
-import { counterContext } from "../../../context/generalContext"
 
 
 export default  function Buttons(){
 
-    const {addition} = useContext(counterContext)
+    const { addition } = useContext(CounterContext)
 
     return (
         <>
             
             <div>
-                <button onClick={() => addition(100)}> Add + 100 </button>
+                <button onClick={()=>addition(1)}> Addition </button>
             </div>
         
         

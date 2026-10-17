@@ -1,4 +1,4 @@
 import { createContext } from "react";
 
-export const DashboardContext = createContext()
-export const counterContext = counterContext()
+export const CounterContext = createContext()
+export const DashbordContextStore =  createContext()

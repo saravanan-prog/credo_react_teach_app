@@ -1,16 +1,17 @@
-import TotalCustomer from "./components/TotalCustomer";
-import TotalProducts from "./components/TotalProducts";
-import DashboardResponse from '../../json/dashboardResponse.json'
 import { useState } from "react";
+import customersData from '../../assets/json/customer.json'
+import productData from '../../assets/json/product.json'
+// import the create context 
+import { DashbordContextStore } from "../../context/globalStore";
+import CustomerList from './components/CustomerList';
 
-import { DashboardContext } from "../../context/globalStore";
+
 
 export default function DashboardMain(){
 
-    const [dashboardData,setDashboardData] = useState(DashboardResponse)
+    const [customers,setDashboardData] = useState(customersData)
+    const [products,setProducts] = useState(productData)
     
-
-
     return(
         <>
             <div>
@@ -18,10 +19,15 @@ export default function DashboardMain(){
             </div>
 
             <div>
-                <DashboardContext.Provider value={{ "data" : dashboardData }}>
-                    <TotalCustomer />
-                </DashboardContext.Provider>
-        
+                <DashbordContextStore.Provider value ={
+                    {
+                        customers:  customers,
+                        products  : products
+                    }
+                }>
+                    <CustomerList />
+                </DashbordContextStore.Provider>
+                
             </div>
         </>
     )
