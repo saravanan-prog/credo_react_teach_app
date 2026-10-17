@@ -1,9 +1,9 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom"
-import HomePage from "../Pages/home/Homepage"
-import AboutPage from '../Pages/about/Aboutpage'
-import Dashboard from "../Pages/dashboard/Dashboard"
+import HomePage from "../pages/home/Homepage"
+import AboutPage from '../pages/about/Aboutpage'
+import Dashboard from "../pages/dashboard/Dashboard"
 import ProtectionRoute from "./ProtectionRoute"
-import Login from "../Pages/login/Login"
+import Login from "../pages/login/Login"
 
 
 
