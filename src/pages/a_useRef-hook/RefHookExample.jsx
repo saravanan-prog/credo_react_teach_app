@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 
 export default function RefHookExample() {
+  
+  console.log("Component Rendering.....")
+
   const countRef = useRef();
-  const usernameRef = useRef();
 
   useEffect(() => {
     console.log("countRef", countRef);
