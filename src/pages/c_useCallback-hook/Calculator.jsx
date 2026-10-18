@@ -1,16 +1,27 @@
 import { useCallback, useState } from "react"
 
-export default function ExampleuseCallback(){
-
+export default function Calculator(){
+    console.log("Component Rendering...")
     
     const [count,setCount] = useState(0)
     
-    const doSomething = () => console.log("do something")
+    const doSomething = useCallback(() => {
+        console.log("do something")
+    },[])
+
+    const addCount = () => {
+        setCount(count + 1)
+    }
    
-    return <div>
+    return (
         <div>
-            <p> Count : {count} </p>
-            <button onClick={()=>setCount(count + 1)}> Add count </button>
+            <div>
+                <button onClick={doSomething}>Do Something</button>
+            </div>
+            <div>
+                <p> Count : {count} </p>
+                <button onClick={addCount}> Add count </button>
+            </div>
         </div>
-    </div>
+    )
 }

@@ -10,6 +10,8 @@ export const useOtp = (digit) => {
 
     if(digit == 5)
        return Math.floor(10000 + Math.random() * 90000)
+    if(digit == 4)
+       return Math.floor(1000 + Math.random() * 9000)
     else
        return Math.floor(100 + Math.random() * 900)
 
@@ -54,6 +56,5 @@ export const useFetch = (url) => {
         loading : loading,
         error : error,
         data : data
-
     }
 }

@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import RefHookExample from "./pages/a_useRef-hook/RefHookExample";
-import UnControlledForm from "./pages/a_useRef-hook/UncontrolledForm";
+// Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+// Bootstrap JavaScript
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+import DemoPage from "./pages/e_demo-page/DemoPage";
+
 
 
 
@@ -12,7 +17,7 @@ import UnControlledForm from "./pages/a_useRef-hook/UncontrolledForm";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-     <RefHookExample />
-  </React.StrictMode>
+  <div>
+     <DemoPage />
+  </div>
 );

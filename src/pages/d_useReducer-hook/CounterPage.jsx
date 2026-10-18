@@ -1,7 +1,9 @@
 import { useReducer } from "react"
+import { counterAction } from "./counter.action"
 
 export default function CounterPage(){
    
+    const [count,dispatch] = useReducer(counterAction,0)
     
 
     return (
@@ -11,13 +13,13 @@ export default function CounterPage(){
             </div>
 
             <div>
-                <p> Count :0 </p>
+                <p> Count : {count} </p>
             </div>
 
             <div>
-                <button>Add</button>
-                <button>sub</button>
-                <button>Mul</button>
+                <button onClick={()=>dispatch({type:"ADD",input:2})}>Add + 2</button>
+                <button onClick={()=>dispatch({type:"ADD",input:2})}>sub</button>
+                <button onClick={()=>dispatch({type:"ADD",input:2})}>Mul</button>
             </div>
         
         </>
