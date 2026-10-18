@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export default function D_ReactCounterProgram() {
+  
+  console.log("component Rendering....")
 
   const [count, setCount] = useState(0)   
   

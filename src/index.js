@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import H_ReactMultipleobject from './pages/H_ReactMultipleobject';
+import D_ReactCounterProgram from './Pages/D_ReactCounterProgram';
 
 
 
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-    <H_ReactMultipleobject />
+    <D_ReactCounterProgram />
   </React.StrictMode>
  
 );
