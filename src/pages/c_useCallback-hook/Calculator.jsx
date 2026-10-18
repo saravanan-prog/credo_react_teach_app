@@ -5,12 +5,8 @@ export default function ExampleuseCallback(){
     
     const [count,setCount] = useState(0)
     
-    const doSomething = useCallback(() => {
-        console.log("do something")
-    },[])
-  
+    const doSomething = () => console.log("do something")
    
-    
     return <div>
         <div>
             <p> Count : {count} </p>

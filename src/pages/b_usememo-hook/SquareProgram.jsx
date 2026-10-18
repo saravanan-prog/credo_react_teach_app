@@ -12,9 +12,7 @@ export default function SquareProgram(){
    const [count,setCount] = useState(0)
    const [square,setSquare] = useState(2)
    
-   const squareArea = useMemo(() => {
-        return calculateSquareArea(square)
-   },[square])
+   const squareArea =  calculateSquareArea(square)
 
    return (
     <>
