@@ -9,12 +9,20 @@ export default function LoginPage(){
         event.preventDefault()
 
         try{
-            let payload = {
+            const url = "https://fakestoreapi.com/auth/login"
+            const payload = {
                 "username" : formRef.current[0].value,
                 "password" : formRef.current[1].value
             }
+            const option = {
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(payload)
+            }
 
-            let response = await axios.post("https://fakestoreapi.com/auth/login",payload)
+            let response = await fetch(url,option)
             console.log("response=====>",response)
             localStorage.setItem("token",response?.data.token)
         }
