@@ -1,15 +1,18 @@
-import { useSelector,useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addition,subracton,multiplication } from "./counter.slice"
 import { Link } from "react-router"
 
 
 export default function CounterPage(){
 
+    useSelector((state) => console.log(" counter page state====>",state))
+
+   const dispatch = useDispatch()
    const applicationTitle  =  useSelector((state) => state?.counterReducer?.appTitle)
    const count             =  useSelector((state) => state?.counterReducer?.count)
 
 
-   const dispatch = useDispatch()
+   
 
 
     return <div>

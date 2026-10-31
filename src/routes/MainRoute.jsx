@@ -12,11 +12,7 @@ export default function MainRoute(){
                 <Route path = "counter" element ={ <CounterPage />} />
                 <Route path = "loan" element ={ <LoanPage />} />
                 <Route path = "review" element ={ <ReviewsPage />} />
-
-
-
             </Routes>
-        
         </BrowserRouter>
     </div>
 }
